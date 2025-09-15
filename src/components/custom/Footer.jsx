@@ -11,7 +11,7 @@ import { Separator } from "../ui/separator";
 
 function Footer() {
   return (
-    <footer className="bg-gray-50 py-12">
+    <footer className="bg-gray-50 py-12 px-6">
       <div className="mx-auto">
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row gap-y-6  mb-12 items-start md:justify-between mx-10">

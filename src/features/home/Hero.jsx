@@ -31,10 +31,10 @@ function Hero() {
       className="relative overflow-hidden mt-10"
     >
       {/* Background Image */}
-      <div className="fixed inset-0 -z-10 flex items-center justify-center p-4">
+      <div className="fixed inset-0 -z-10 flex items-center justify-center p-4 mt-10">
         <img
           src="/Pattern.png"
-          className="h-[92%] w-[92%] rounded-lg object-cover text-transparent"
+          className="h-[92%] w-[93%] rounded-lg object-cover text-transparent"
           alt="CandySmart AI-powered hiring platform dashboard showing CV shortlisting features"
           style={
             {

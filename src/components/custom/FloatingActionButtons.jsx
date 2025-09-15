@@ -18,7 +18,7 @@ const FloatingContactWidget = () => {
   };
 
   return (
-    <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-3">
+    <div className="fixed right-10 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-3">
       {/* WhatsApp Button */}
       <button
         onClick={handleWhatsAppClick}

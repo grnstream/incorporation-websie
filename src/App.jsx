@@ -3,6 +3,7 @@ import HomePage from "./pages/home.page";
 import MainLayout from "./layouts/main.layout";
 import FloatingContactWidget from "./components/custom/FloatingActionButtons";
 import AboutUsPage from "./pages/about.page";
+import ContactPage from "./pages/contact.page";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route index element={<Navigate to="/home" />} replace />
           <Route path="home" element={<HomePage />} />
           <Route path="about" element={<AboutUsPage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Route>
       </Routes>
       <FloatingContactWidget />

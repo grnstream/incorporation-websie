@@ -12,7 +12,7 @@ function PricingCard({ plans }) {
               key={index}
               className={`rounded-2xl p-8 ${
                 plan.isHighlighted
-                  ? "bg-blue-500 text-white shadow-2xl relative"
+                  ? "bg-gradient-to-b from-primary-400 to-primary-500 text-white shadow-2xl relative"
                   : "bg-white text-gray-900 shadow-lg"
               } transition-all duration-300 hover:shadow-xl hover:scale-105`}
             >

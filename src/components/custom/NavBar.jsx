@@ -29,7 +29,7 @@ function NavigationBar({ isTransparentHeader, isAtTop }) {
         }`}
       >
         <NavigationMenuItem>
-          <NavigationMenuLink>Home</NavigationMenuLink>
+          <NavigationMenuLink><Link to="/">Home</Link></NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
@@ -83,7 +83,7 @@ function NavigationBar({ isTransparentHeader, isAtTop }) {
             <ul className="grid w-[300px] gap-4">
               <li>
                 <NavigationMenuLink asChild>
-                  <Link href="#">
+                  <Link to="#">
                     <div className="font-medium">Starter</div>
                     <div className="text-muted-foreground">
                       Designed for individuals or businesses exploring the
@@ -92,7 +92,7 @@ function NavigationBar({ isTransparentHeader, isAtTop }) {
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="#">
+                  <Link to="#">
                     <div className="font-medium">Intermediate</div>
                     <div className="text-muted-foreground">
                       Efficient tools for independent recruiters.
@@ -100,7 +100,7 @@ function NavigationBar({ isTransparentHeader, isAtTop }) {
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="#">
+                  <Link to="#">
                     <div className="font-medium">Advanced</div>
                     <div className="text-muted-foreground">
                       Best for small-to-medium-sized businesses.

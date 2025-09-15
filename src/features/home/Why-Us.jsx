@@ -8,43 +8,43 @@ import StatsBanner from "@/src/components/custom/StatsBanner";
 const features = [
   {
     title: "Registration of Companies",
-    logo: gsLogo, // Replace with your actual icon path
+    logo: gsLogo, 
     description: "We help you register the limited liability companies according to current rules and regulations.",
     isHighlighted: true
   },
   {
     title: "Companies Limited by Guarantee",
-    logo: gsLogo, // Replace with your actual icon path
+    logo: gsLogo, 
     description: "We help you register Companies Limited by Guarantee."
   },
   {
     title: "Corporate Secretarial services",
-    logo: gsLogo, // Replace with your actual icon path
+    logo: gsLogo, 
     description: "We offer comprehensive Corporate Secretarial services, compliance with regulatory obligations."
   },
   {
     title: "Accounting and Bookkeeping",
-    logo: gsLogo, // Replace with your actual icon path
+    logo: gsLogo, 
     description: "Our expert team provides accounting and bookkeeping services."
   },
   {
     title: "Income Tax consultation",
-    logo: gsLogo, // Replace with your actual icon path
+    logo: gsLogo, 
     description: "We provide expert consultation on income tax matters."
   },
   {
     title: "VAT, SSCL related consolations",
-    logo: gsLogo, // Replace with your actual icon path
+    logo: gsLogo, 
     description: "You can get assistance with VAT and SSCL computation and filing of returns via the RAMIS system."
   },
   {
     title: "HR Services",
-    logo: gsLogo, // Replace with your actual icon path
+    logo: gsLogo, 
     description: "We handle EPF/ETF matters, filing R and C Forms, and assist with B Card registration."
   },
   {
     title: "TIN Registration",
-    logo: gsLogo, // Replace with your actual icon path
+    logo: gsLogo, 
     description: "We can assist you in obtaining a TIN number online."
   }
 ];

@@ -18,13 +18,13 @@ function Header({ toggleNav, isAtTop }) {
 
     // If header is NOT at top and isTransparentHeader is false
     else {
-      return "bg-white/50 shadow-xs backdrop-blur-sm border border-neutral-300/50 px-2 lg:px-6 w-[80vw] sm:w-[60vw] lg:w-[80vw]  xl:w-[70vw] 2xl:w-[55vw] 3xl:w-[50vw] rounded-2xl ";
+      return "bg-white/50 shadow-xs backdrop-blur-sm border border-neutral-300/50 px-2 lg:px-6 w-[80vw] sm:w-[60vw] lg:w-[80vw]  xl:w-[70vw] 2xl:w-[55vw] 3xl:w-[50vw] rounded-2xl";
     }
   };
 
   return (
     <div
-      className={`mx-auto flex h-[56px] items-center justify-between lg:h-[64px] ${getHeaderStyles()} transition-[width] duration-300 ease-in-out z-50`}
+      className={`mx-auto flex h-[56px] items-center justify-between lg:h-[64px] ${getHeaderStyles()} transition-[width] duration-300 ease-in-out z-50 `}
     >
       <Logo
         logoBlack={!isTransparentHeader || !isAtTop}
