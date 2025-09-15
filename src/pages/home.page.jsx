@@ -1,3 +1,4 @@
+import ITSupport from "../components/custom/ItSupport";
 import BusinessBanner from "../features/home/Banner";
 import FAQ from "../features/home/FAQ";
 import Hero from "../features/home/Hero";
@@ -13,6 +14,7 @@ function HomePage() {
       <WhyChooseUs/>
       <Testimonials/>
       <Pricing/>
+      <ITSupport/>
       <FAQ />
       <BusinessBanner/>
     </>

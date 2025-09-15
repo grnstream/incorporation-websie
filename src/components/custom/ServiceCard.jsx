@@ -17,7 +17,7 @@ flex flex-col
           style={{
             mask: `url(${logo}) no-repeat center/contain`,
             WebkitMask: `url(${logo}) no-repeat center/contain`,
-          }}
+          }}       
         />
       </div>
 
