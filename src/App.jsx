@@ -4,6 +4,7 @@ import MainLayout from "./layouts/main.layout";
 import FloatingContactWidget from "./components/custom/FloatingActionButtons";
 import AboutUsPage from "./pages/about.page";
 import ContactPage from "./pages/contact.page";
+import ServicesPage from "./pages/services.page";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="home" element={<HomePage />} />
           <Route path="about" element={<AboutUsPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="services" element={<ServicesPage />} />
         </Route>
       </Routes>
       <FloatingContactWidget />

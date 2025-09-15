@@ -29,7 +29,9 @@ function NavigationBar({ isTransparentHeader, isAtTop }) {
         }`}
       >
         <NavigationMenuItem>
-          <NavigationMenuLink><Link to="/">Home</Link></NavigationMenuLink>
+          <NavigationMenuLink>
+            <Link to="/">Home</Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
@@ -39,38 +41,9 @@ function NavigationBar({ isTransparentHeader, isAtTop }) {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>All Services</NavigationMenuTrigger>
-          <NavigationMenuContent className={`text-primary-foreground`}>
-            <ul className="grid w-[300px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <div className="font-medium">Starter</div>
-                    <div className="text-muted-foreground">
-                      Designed for individuals or businesses exploring the
-                      platform for the first time.
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <div className="font-medium">Intermediate</div>
-                    <div className="text-muted-foreground">
-                      Efficient tools for independent recruiters.
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <div className="font-medium">Advanced</div>
-                    <div className="text-muted-foreground">
-                      Best for small-to-medium-sized businesses.
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link to="/services">All Services</Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
@@ -83,28 +56,18 @@ function NavigationBar({ isTransparentHeader, isAtTop }) {
             <ul className="grid w-[300px] gap-4">
               <li>
                 <NavigationMenuLink asChild>
-                  <Link to="#">
-                    <div className="font-medium">Starter</div>
-                    <div className="text-muted-foreground">
-                      Designed for individuals or businesses exploring the
-                      platform for the first time.
-                    </div>
+                  <Link to="/refund-policy">
+                    <div className="font-medium">Refund Policy</div>
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link to="#">
-                    <div className="font-medium">Intermediate</div>
-                    <div className="text-muted-foreground">
-                      Efficient tools for independent recruiters.
-                    </div>
+                  <Link to="/refund-policy">
+                    <div className="font-medium">Privacy Policy</div>
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link to="#">
-                    <div className="font-medium">Advanced</div>
-                    <div className="text-muted-foreground">
-                      Best for small-to-medium-sized businesses.
-                    </div>
+                  <Link to="/refund-policy">
+                    <div className="font-medium">Terms & Conditions</div>
                   </Link>
                 </NavigationMenuLink>
               </li>

@@ -14,9 +14,9 @@ function Footer() {
     <footer className="bg-gray-50 py-12 px-6">
       <div className="mx-auto">
         {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row gap-y-6  mb-12 items-start md:justify-between mx-10">
+        <div className="flex flex-col md:flex-row gap-y-6  mb-2 items-start md:justify-between mx-10">
           {/* Left Section - Logo and Contact Info */}
-          <div className="space-y-3">
+          <div className="space-y-3 mb-5 lg:mb-0">
             {/* Logo */}
             <div className="flex items-center">
               <Logo />
