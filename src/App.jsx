@@ -5,6 +5,9 @@ import FloatingContactWidget from "./components/custom/FloatingActionButtons";
 import AboutUsPage from "./pages/about.page";
 import ContactPage from "./pages/contact.page";
 import ServicesPage from "./pages/services.page";
+import PrivacyPolicyPage from "./pages/privacy-policy.page";
+import RefundPolicyPage from "./pages/refund-policy.page";
+import TermsAndConditionsPage from "./pages/terms-and-conditions.page";
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
           <Route path="about" element={<AboutUsPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="services" element={<ServicesPage />} />
+          <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="refund-policy" element={<RefundPolicyPage />} />
+          <Route path="terms-and-conditions" element={<TermsAndConditionsPage />} />
         </Route>
       </Routes>
       <FloatingContactWidget />

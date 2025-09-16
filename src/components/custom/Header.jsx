@@ -13,7 +13,7 @@ function Header({ toggleNav, isAtTop }) {
   const getHeaderStyles = () => {
     // If header is at top and isTransparentHeader is true
     if (isAtTop) {
-      return " bg-transparent px-8 lg:px-12 w-full";
+      return " bg-transparent px-8 lg:px-16 w-full";
     }
 
     // If header is NOT at top and isTransparentHeader is false
@@ -31,7 +31,7 @@ function Header({ toggleNav, isAtTop }) {
         className={`${isAtTop ? "" : "w-[140px] lg:w-[160px]"} `}
       />
 
-      <NavigationBar isTransparentHeader={isTransparentHeader} isAtTop={isAtTop} />
+      <NavigationBar isTransparentHeader={isTransparentHeader} isAtTop={isAtTop} className=""/>
 
       <div
         className={`flex items-center justify-end gap-3 ${isAtTop ? "min-w-[180px]" : "min-w-[100px]"}`}

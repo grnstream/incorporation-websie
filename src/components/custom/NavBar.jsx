@@ -61,12 +61,12 @@ function NavigationBar({ isTransparentHeader, isAtTop }) {
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link to="/refund-policy">
+                  <Link to="/privacy-policy">
                     <div className="font-medium">Privacy Policy</div>
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link to="/refund-policy">
+                  <Link to="/terms-and-conditions">
                     <div className="font-medium">Terms & Conditions</div>
                   </Link>
                 </NavigationMenuLink>

@@ -6,14 +6,14 @@ const ServiceCard = ({ title, description, logo, btntext }) => {
     <div
       className={`
         group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-lg cursor-pointer
-        bg-gradient-to-b hover:text-white from-neutral-50 to-neutral-100 hover:from-blue-400 hover:to-blue-500 text-gray-900 border-1 border-neutral-200
+        bg-gradient-to-b hover:text-white from-neutral-50 to-neutral-100 hover:from-primary-400 hover:to-primary-500 text-gray-900 border-1 border-neutral-200
 flex flex-col      
         `}
     >
       {/* Icon */}
-      <div className="w-13 h-13 rounded-full flex items-center justify-center mb-10 bg-blue-500 group-hover:bg-white transition-all duration-300">
+      <div className="w-13 h-13 rounded-full flex items-center justify-center mb-10 bg-primary-500 group-hover:bg-white transition-all duration-300">
         <div
-          className="w-6 h-6 bg-white group-hover:bg-blue-500 transition-all duration-300"
+          className="w-7 h-7 bg-white group-hover:bg-primary-500 transition-all duration-300"
           style={{
             mask: `url(${logo}) no-repeat center/contain`,
             WebkitMask: `url(${logo}) no-repeat center/contain`,

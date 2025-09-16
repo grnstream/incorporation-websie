@@ -46,12 +46,12 @@ function Hero() {
       </div>
       <div className="container/fluid flex flex-col items-center justify-center">
         {/* Vison, Growth, Impact */}
-        <div className="relative flex justify-center lg:justify-start mt-5">
+        <div className="relative flex justify-center lg:justify-start mt-5 cursor-default">
           <Badge
             variant="outline"
-            className="text-xs bg-gray-100 text-primary-foreground rounded-full border-gray-300 antialiased"
+            className="text-xs bg-gray-100 text-primary-foreground rounded-full border-gray-300 antialiased "
           >
-            <p className="flex items-center gap-2">
+            <p className="flex items-center gap-2 ">
               <Plane className="w-5 h-5 text-primary-500" />
               <span className="text-sm text-neutral-700">
                 Vision. Growth. Impact.
@@ -60,7 +60,7 @@ function Hero() {
           </Badge>
         </div>
         {/* Hero Main Title */}
-        <div className="flex flex-col text-center mt-5 items-center transition-all duration-200">
+        <div className="flex flex-col text-center mt-5 items-center transition-all duration-200 cursor-default">
           <p className="text-2xl md:text-3xl lg:text-5xl font-semibold text-center ">
             Empowering Your Business,
             <br className="hidden lg:block" /> Every Step of the Way
@@ -78,7 +78,7 @@ function Hero() {
         </div>
 
         {/* Buttons */}
-        <div className="flex justify-center gap-x-2 mt-5">
+        <div className="flex justify-center gap-x-2 mt-5 ">
           <Button variant={"default"} className={"rounded-full min-w-[120px]"}>
             <SparklesText sparklesCount={3} className={"text-primary-50"}>
               Incorp Al
@@ -94,8 +94,8 @@ function Hero() {
           </Button>
         </div>
         <div className="w-full">
-            <InteractiveSelector />
-          </div>
+          <InteractiveSelector />
+        </div>
         {/* Banner Image/Video */}
         {/* <div className="flex bg-neutral w-[720px] h-[400px] mt-10 rounded-4xl items-center justify-center">
           

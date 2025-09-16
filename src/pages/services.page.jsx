@@ -1,11 +1,12 @@
 import ServicesCards from "../components/custom/ServicesCards";
-import registrationdoc from "@/src/assets/icons/document.png";
-import guarantee from "@/src/assets/icons/trust.png";
-import corporate from "@/src/assets/icons/corporate.png";
-import bookkeeping from "@/src/assets/icons/bookkeeping.png";
-import taxes from "@/src/assets/icons/taxes.png";
-import vat from "@/src/assets/icons/vat.png";
+import logoletter from "@/src/assets/icons/logo-letter.png";
+import webdevelopment from "@/src/assets/icons/webdevelopment.png";
+import onlinestore from "@/src/assets/icons/online-store.png";
+import contentcreator from "@/src/assets/icons/content-creator.png";
+import pointofsale from "@/src/assets/icons/point-of-sale.png";
 import erp from "@/src/assets/icons/erp.png";
+import expenses from "@/src/assets/icons/expenses.png";
+import custom from "@/src/assets/icons/custom.png";
 import ServiceCard from "../components/custom/ServiceCard";
 
 function ServicesPage() {
@@ -34,50 +35,50 @@ function ServicesPage() {
 
   const additionalfeatures = [
     {
-      title: "Registration of Companies",
-      logo: registrationdoc,
+      title: "Logo, Letterhead, Visiting Card Designs",
+      logo: logoletter,
       description:
-        "We help you register the limited liability companies according to current rules and regulations.",
+        "Create a strong brand identity with professional designs that leave a lasting impression.",
       isHighlighted: true,
     },
     {
-      title: "Companies Limited by Guarantee",
-      logo: guarantee,
-      description: "We help you register Companies Limited by Guarantee.",
+      title: "Website Design",
+      logo: webdevelopment,
+      description: "Engaging, modern websites tailored to your business needs",
     },
     {
-      title: "Corporate Secretarial services",
-      logo: corporate,
+      title: "E-commerce Integration",
+      logo: onlinestore,
       description:
-        "We offer comprehensive Corporate Secretarial services, compliance with regulatory obligations.",
+        "Seamlessly sell online with secure and scalable e-commerce",
     },
     {
-      title: "Accounting and Bookkeeping",
-      logo: bookkeeping,
+      title: "Content Creation",
+      logo: contentcreator,
       description:
-        "Our expert team provides accounting and bookkeeping services.",
+        "Compelling content that connects with your audience and builds trust.",
     },
     {
-      title: "Income Tax consultation",
-      logo: taxes,
-      description: "We provide expert consultation on income tax matters.",
+      title: "POS Systems",
+      logo: pointofsale,
+      description: "Smart point-of-sale systems to simplify sales and manage inventory.",
     },
     {
-      title: "VAT, SSCL related consolations",
-      logo: vat,
-      description:
-        "You can get assistance with VAT and SSCL computation and filing of returns via the RAMIS system.",
-    },
-    {
-      title: "HR Services",
+      title: "ERP Systems",
       logo: erp,
       description:
-        "We handle EPF/ETF matters, filing R and C Forms, and assist with B Card registration.",
+        "All-in-one business management with powerful ERP solutions",
     },
     {
-      title: "TIN Registration",
-      logo: registrationdoc,
-      description: "We can assist you in obtaining a TIN number online.",
+      title: "Accounting Software",
+      logo: expenses,
+      description:
+        "Easy-to-use software to manage your accounts and finances effortlessly.",
+    },
+    {
+      title: "Custom Software",
+      logo: custom,
+      description: "Tailor-made software built to match your unique business processes",
     },
   ];
   return (
