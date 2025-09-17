@@ -8,8 +8,11 @@ import {
 } from "lucide-react";
 import Logo from "./Logo";
 import { Separator } from "../ui/separator";
+import { Link, useNavigate } from "react-router";
+import { FaTiktok } from "react-icons/fa";
 
 function Footer() {
+  const navigate = useNavigate();
   return (
     <footer className="bg-gray-50 py-12 px-6">
       <div className="mx-auto">
@@ -19,7 +22,7 @@ function Footer() {
           <div className="space-y-3 mb-5 lg:mb-0">
             {/* Logo */}
             <div className="flex items-center">
-              <Logo />
+              <Logo onClick={() => navigate("/home")} />
             </div>
 
             {/* Contact Information */}
@@ -51,59 +54,59 @@ function Footer() {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 Quick Links
               </h3>
-              <a
-                href="#"
+              <Link
+                to="/refund-policy"
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Refund Policy
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/privacy-policy"
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Privacy Policy
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/terms-and-conditions"
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Terms & Conditions
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#faq"
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 FAQ
-              </a>
+              </Link>
             </div>
             <div className="w-full sm:w-1/2 space-y-3">
-              <a className="block text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              <Link to="/about" className="block text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 About Us
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/contact"
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Contact Us
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/services"
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Services
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Pricing Options
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Success Stories
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -115,22 +118,28 @@ function Footer() {
             {/* Social Media Icons */}
             <div className="flex items-center space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/incorporationlk/"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <Instagram className="w-5 h-5 text-gray-600" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/incorporation.lk.KRC"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <Facebook className="w-5 h-5 text-gray-600" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/channel/UCXIHnAQ2MxXpznEg11aK0Rg"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <Youtube className="w-5 h-5 text-gray-600" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@incorporationlk"
+                className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
+              >
+                <FaTiktok className="w-5 h-5 text-gray-500" />
               </a>
             </div>
 
@@ -138,7 +147,13 @@ function Footer() {
             <div className="text-center">
               <p className="text-sm text-gray-400">
                 Powered By{" "}
-                <span className="text-blue-500 font-medium">GreenStream</span>
+                <a
+                  href="https://www.greenstream.lk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="text-blue-500 font-medium">GreenStream</span>
+                </a>
               </p>
             </div>
 
@@ -146,8 +161,14 @@ function Footer() {
             <div className="text-right">
               <p className="text-sm text-gray-400">
                 © Copyright 2025{" "}
-                <span className="font-medium text-primary-600">KRC</span>. All
-                Rights Reserved
+                <a
+                  href="https://www.krathnasinghe.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="font-medium text-primary-600">KRC</span>
+                </a>
+                . All Rights Reserved
               </p>
             </div>
           </div>

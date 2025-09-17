@@ -24,7 +24,7 @@ function Header({ toggleNav, isAtTop }) {
 
   return (
     <div
-      className={`mx-auto flex h-[56px] items-center justify-between lg:h-[64px] ${getHeaderStyles()} transition-[width] duration-300 ease-in-out z-50 `}
+      className={`mx-auto flex h-[56px] items-center justify-between lg:h-[64px] ${getHeaderStyles()} transition-[width] duration-300 ease-in-out z-50 bg-white `}
     >
       <Logo
         logoBlack={!isTransparentHeader || !isAtTop}
@@ -40,7 +40,7 @@ function Header({ toggleNav, isAtTop }) {
           <div>
             <Button
               size={"lg"}
-              className={"hidden rounded-full text-white lg:block"}
+              className={"hidden rounded-full text-white lg:block hover:bg-gradient-to-t"}
               
             >
               Go To Online Platform

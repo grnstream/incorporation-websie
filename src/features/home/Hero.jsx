@@ -1,9 +1,10 @@
 import { SparklesText } from "@/src/components/magicui/sparkles-text";
 import { Badge } from "@/src/components/ui/badge";
 import { Button } from "@/src/components/ui/button";
-import { Plane, PlayIcon } from "lucide-react";
+import { Plane } from "lucide-react";
 import gsLogo from "@/public/gs-logo.png";
 import InteractiveSelector from "@/src/components/ui/interactive-selector";
+import herobanner from '@/src/assets/hero-banner.png';
 const customers = [
   {
     customer: "GreenStream",
@@ -31,17 +32,11 @@ function Hero() {
       className="relative overflow-hidden mt-10"
     >
       {/* Background Image */}
-      <div className="fixed inset-0 -z-10 flex items-center justify-center p-4 mt-10">
+      <div className="fixed inset-0 -z-10 flex items-center justify-center p-4">
         <img
           src="/Pattern.png"
-          className="h-[92%] w-[93%] rounded-lg object-cover text-transparent"
-          alt="CandySmart AI-powered hiring platform dashboard showing CV shortlisting features"
-          style={
-            {
-              // filter: "blur(20px)",
-              // animation: "unblur 1s ease-out 0.5s forwards",
-            }
-          }
+          className="h-[92%] lg:w-[91vw] xl:w-[98vw] rounded-lg object-cover text-transparent"
+          alt="Incorporation.lk - We provide complete solutions for your business"
         />
       </div>
       <div className="container/fluid flex flex-col items-center justify-center">
@@ -79,27 +74,32 @@ function Hero() {
 
         {/* Buttons */}
         <div className="flex justify-center gap-x-2 mt-5 ">
-          <Button variant={"default"} className={"rounded-full min-w-[120px]"}>
+          <Button variant={"default"} className={"rounded-full min-w-[120px]"} size={'lg'}>
             <SparklesText sparklesCount={3} className={"text-primary-50"}>
               Incorp Al
             </SparklesText>
           </Button>
           <Button
+          size={'lg'}
             variant={"outline"}
             className={
-              "rounded-full border-neutral-200 bg-neutral-100 min-w-[120px]"
+              "rounded-full border-neutral-200 bg-neutral-100 min-w-[120px] hover:bg-white"
             }
           >
-            Learn More
+            Get Started
           </Button>
         </div>
-        <div className="w-full">
+        {/* <div className="w-full">
           <InteractiveSelector />
-        </div>
-        {/* Banner Image/Video */}
-        {/* <div className="flex bg-neutral w-[720px] h-[400px] mt-10 rounded-4xl items-center justify-center">
-          
         </div> */}
+        {/* Banner Image/Video */}
+        <div className="flex w-[80%] mt-10 rounded-4xl items-center justify-center">
+          <img
+          src={herobanner}
+          className="h-auto w-full rounded-lg object-cover text-transparent"
+          alt="Incorporation.lk - We provide complete solutions for your business"
+        />
+        </div>
         {/* Customers */}
         <div className="flex flex-col bg-white mt-10 rounded-4xl items-center justify-center text-neutral-900">
           <p>Trusted by Over 1,000 Clients Worldwide</p>

@@ -4,7 +4,6 @@ function PricingCard({ plans }) {
   return (
     <div className="min-h-screen py-12 px-4">
       <div className="max-w-7xl mx-auto">
-
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
@@ -40,10 +39,10 @@ function PricingCard({ plans }) {
 
               {/* CTA Button */}
               <button
-                className={`w-full py-3 px-6 rounded-full font-medium mb-8 transition-all duration-200 ${
+                className={`w-full py-3 px-6 rounded-full font-medium mb-8 transition-all duration-300 ${
                   plan.isHighlighted
                     ? "bg-white text-blue-500 hover:bg-gray-100"
-                    : "bg-blue-500 text-white hover:bg-blue-600"
+                    : "bg-gradient-to-b from-primary-400 to-primary-500 text-white hover:bg-gradient-to-t transition-colors duration-300"
                 }`}
               >
                 {plan.buttonText}
@@ -55,10 +54,15 @@ function PricingCard({ plans }) {
                   <div key={featureIndex} className="flex items-start gap-3">
                     <div
                       className={`rounded-full p-1 mt-0.5 flex-shrink-0 ${
-                        plan.isHighlighted ? "bg-blue-400" : "bg-blue-500"
+                        plan.isHighlighted ? "bg-white" : "bg-blue-500"
                       }`}
                     >
-                      <Check size={12} className="text-white" />
+                      <Check
+                        size={12}
+                        className={`${
+                          plan.isHighlighted ? "text-blue-500" : "text-white"
+                        }`}
+                      />
                     </div>
                     <span
                       className={`text-sm leading-relaxed ${

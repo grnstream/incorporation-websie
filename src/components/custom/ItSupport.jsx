@@ -10,7 +10,7 @@ function ITSupport() {
           custom software solutions, all at affordable rates designed to make
           their business journey smooth and successful.
         </p>
-        <Button variant={"default"} className={"text-white rounded-full max-w-35 mt-10 px-28 py-7"}>
+        <Button variant={"default"} className={"text-white rounded-full max-w-35 mt-10 px-28 py-7 hover:bg-gradient-to-t"}>
           Find more
         </Button>
       </div>
