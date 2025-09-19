@@ -53,7 +53,7 @@ function NavigationBar({ isTransparentHeader, isAtTop }) {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Policies</NavigationMenuTrigger>
           <NavigationMenuContent className={`text-primary-foreground`}>
-            <ul className="grid w-[300px] gap-4">
+            <ul className="grid w-[200px] gap-4">
               <li>
                 <NavigationMenuLink asChild>
                   <Link to="/refund-policy">

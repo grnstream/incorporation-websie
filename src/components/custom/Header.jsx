@@ -9,7 +9,6 @@ import NavigationBar from "./NavBar";
 function Header({ toggleNav, isAtTop }) {
   const isTransparentHeader = useTransparentHeader();
 
-
   const getHeaderStyles = () => {
     // If header is at top and isTransparentHeader is true
     if (isAtTop) {
@@ -31,22 +30,33 @@ function Header({ toggleNav, isAtTop }) {
         className={`${isAtTop ? "" : "w-[140px] lg:w-[160px]"} `}
       />
 
-      <NavigationBar isTransparentHeader={isTransparentHeader} isAtTop={isAtTop} className=""/>
+      <NavigationBar
+        isTransparentHeader={isTransparentHeader}
+        isAtTop={isAtTop}
+        className=""
+      />
 
       <div
-        className={`flex items-center justify-end gap-3 ${isAtTop ? "min-w-[180px]" : "min-w-[100px]"}`}
+        className={`flex items-center justify-end gap-3 ${
+          isAtTop ? "min-w-[180px]" : "min-w-[100px]"
+        }`}
       >
-      
+        <a
+          href="https://platform.incorporation.lk/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div>
             <Button
               size={"lg"}
-              className={"hidden rounded-full text-white lg:block hover:bg-gradient-to-t"}
-              
+              className={
+                "hidden rounded-full text-white lg:block hover:bg-gradient-to-t"
+              }
             >
               Go To Online Platform
             </Button>
           </div>
-       
+        </a>
 
         <div className="flex items-center gap-1 sm:gap-3.5 lg:hidden">
           <Button
@@ -55,7 +65,11 @@ function Header({ toggleNav, isAtTop }) {
             onClick={toggleNav}
           >
             <HiMenuAlt3
-              className={` ${isTransparentHeader ? "group-hover:text-background text-background/80" : "group-hover:text-primary-foreground text-primary-foreground/80"} size-5 cursor-pointer transition-all duration-300 ease-in-out sm:size-6`}
+              className={` ${
+                isTransparentHeader
+                  ? "group-hover:text-background text-background/80"
+                  : "group-hover:text-primary-foreground text-primary-foreground/80"
+              } size-5 cursor-pointer transition-all duration-300 ease-in-out sm:size-6`}
             />
           </Button>
         </div>

@@ -1,11 +1,10 @@
 import { Button } from "@/src/components/ui/button";
-import ServiceCard from "@/src/components/custom/ServiceCard";
 import StatsBanner from "@/src/components/custom/StatsBanner";
 import ServicesCards from "@/src/components/custom/ServicesCards";
-
-
+import { useNavigate } from "react-router";
 
 function WhyChooseUs() {
+  const navigate = useNavigate();
   return (
     <section
       id="why-us"
@@ -16,7 +15,8 @@ function WhyChooseUs() {
         {/* Main Title */}
         <div className="flex flex-col text-center mt-5 items-center transition-all duration-200">
           <p className="text-2xl md:text-3xl lg:text-5xl font-semibold text-center ">
-            Start & Run Your Business<br/> With Confidence
+            Start & Run Your Business
+            <br /> With Confidence
           </p>
           {/* Sub description */}
           <div className="flex max-w-[75%]">
@@ -27,21 +27,21 @@ function WhyChooseUs() {
             </p>
           </div>
         </div>
-        <ServicesCards/>
+        <ServicesCards />
         {/* Find More Button */}
         <div className="my-12">
-          <Button 
-            size="lg" 
+          <Button
+            onClick={() => navigate("/services")}
+            size="lg"
             className="text-white px-8 py-3 rounded-full"
           >
             Find more
           </Button>
         </div>
-        
       </div>
       <div className="">
-            <StatsBanner/>
-        </div>
+        <StatsBanner />
+      </div>
     </section>
   );
 }

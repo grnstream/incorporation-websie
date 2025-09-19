@@ -51,13 +51,13 @@ export default function AboutUsPage() {
             <img
               src="/images/handshake.png"
               alt="Handshake"
-              className="rounded-3xl mr-10 mb-[-20px] shadow-lg lg:h-[67vh] xl:h-[70vh] object-cover"
+              className="rounded-3xl mr-10 mb-[-20px] shadow-lg lg:h-[67vh] xl:h-[70vh] 2xl:h-[900px] object-cover"
             />
           </div>
         </div>
       </section>
 
-      <StatsBanner />
+      <StatsBanner className="sticky bottom-0" />
     </div>
   );
 }

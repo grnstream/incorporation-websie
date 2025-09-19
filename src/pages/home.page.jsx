@@ -14,7 +14,7 @@ function HomePage() {
       <WhyChooseUs/>
       <Testimonials/>
       <Pricing/>
-      <ITSupport/>
+      
       <FAQ />
       <BusinessBanner/>
     </>

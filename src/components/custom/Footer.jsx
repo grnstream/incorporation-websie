@@ -118,25 +118,29 @@ function Footer() {
             {/* Social Media Icons */}
             <div className="flex items-center space-x-4">
               <a
-                href="https://www.instagram.com/incorporationlk/"
+                href="https://www.instagram.com/incorporationlk/" target="_blank"
+                  rel="noopener noreferrer"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <Instagram className="w-5 h-5 text-gray-600" />
               </a>
               <a
-                href="https://www.facebook.com/incorporation.lk.KRC"
+                href="https://www.facebook.com/incorporation.lk.KRC" target="_blank"
+                  rel="noopener noreferrer"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <Facebook className="w-5 h-5 text-gray-600" />
               </a>
               <a
-                href="https://www.youtube.com/channel/UCXIHnAQ2MxXpznEg11aK0Rg"
+                href="https://www.youtube.com/channel/UCXIHnAQ2MxXpznEg11aK0Rg" target="_blank"
+                  rel="noopener noreferrer"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <Youtube className="w-5 h-5 text-gray-600" />
               </a>
               <a
-                href="https://www.tiktok.com/@incorporationlk"
+                href="https://www.tiktok.com/@incorporationlk" target="_blank"
+                  rel="noopener noreferrer"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <FaTiktok className="w-5 h-5 text-gray-500" />

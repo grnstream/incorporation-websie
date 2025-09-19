@@ -4,7 +4,7 @@ import { Button } from "@/src/components/ui/button";
 import { Plane } from "lucide-react";
 import gsLogo from "@/public/gs-logo.png";
 import InteractiveSelector from "@/src/components/ui/interactive-selector";
-import herobanner from '@/src/assets/hero-banner.png';
+import herobanner from "@/src/assets/hero-banner.png";
 const customers = [
   {
     customer: "GreenStream",
@@ -74,13 +74,20 @@ function Hero() {
 
         {/* Buttons */}
         <div className="flex justify-center gap-x-2 mt-5 ">
-          <Button variant={"default"} className={"rounded-full min-w-[120px]"} size={'lg'}>
+          <Button
+            variant={"default"}
+            className={"rounded-full min-w-[120px]"}
+            size={"lg"}
+          >
             <SparklesText sparklesCount={3} className={"text-primary-50"}>
               Incorp Al
             </SparklesText>
           </Button>
           <Button
-          size={'lg'}
+            onClick={() =>
+              window.open("https://platform.incorporation.lk/", "_blank")
+            }
+            size={"lg"}
             variant={"outline"}
             className={
               "rounded-full border-neutral-200 bg-neutral-100 min-w-[120px] hover:bg-white"
@@ -93,16 +100,16 @@ function Hero() {
           <InteractiveSelector />
         </div> */}
         {/* Banner Image/Video */}
-        <div className="flex w-[80%] mt-10 rounded-4xl items-center justify-center">
+        <div className="flex w-[85%] mt-10 rounded-4xl items-center justify-center">
           <img
-          src={herobanner}
-          className="h-auto w-full rounded-lg object-cover text-transparent"
-          alt="Incorporation.lk - We provide complete solutions for your business"
-        />
+            src={herobanner}
+            className="h-auto w-full rounded-lg object-cover text-transparent"
+            alt="Incorporation.lk - We provide complete solutions for your business"
+          />
         </div>
         {/* Customers */}
         <div className="flex flex-col bg-white mt-10 rounded-4xl items-center justify-center text-neutral-900">
-          <p>Trusted by Over 1,000 Clients Worldwide</p>
+          <p>Trusted by Over 1,000 Clients Islandwide</p>
           <div className="flex flex-wrap items-center justify-center gap-6 my-5">
             {customers.map((c, index) => (
               <img

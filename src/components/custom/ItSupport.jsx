@@ -1,8 +1,10 @@
 import { Button } from "../ui/button";
+import { GridBeams } from "../ui/grid-beams";
 
 function ITSupport() {
   return (
-    <div className="bg-neutral-900 w-full text-white/90 items-center justify-items-center py-12">
+    <GridBeams>
+      <div className="bg-neutral-900/50 w-full text-white/90 items-center justify-items-center py-12">
       <div className="flex flex-col justify-center items-center max-w-6xl">
         <p className="text-center text-2xl px-10">
           In addition to the above services, our clients also receive reliable
@@ -15,6 +17,7 @@ function ITSupport() {
         </Button>
       </div>
     </div>
+    </GridBeams>
   );
 }
 
