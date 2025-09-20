@@ -6,7 +6,7 @@ function PricingCard({ plans }) {
     <div className="min-h-[95vh] py-10 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -19,13 +19,15 @@ function PricingCard({ plans }) {
               {/* Plan Header */}
               <div className="mb-6">
                 <h3 className="text-xl font-bold mb-3">{plan.name}</h3>
-                <p
-                  className={`text-sm mb-4 text-justify ${
+                <div className="h-12 lg:h-22 overflow-hidden">
+                  <p
+                  className={`text-xs sm:text-sm mb-4 text-start ${
                     plan.isHighlighted ? "text-blue-100" : "text-gray-600"
                   }`}
                 >
                   {plan.description}
                 </p>
+                </div>
                 <div className="mb-6">
                   <span className="text-3xl font-bold">{plan.price}</span>
                   <span
@@ -79,6 +81,7 @@ function PricingCard({ plans }) {
                   </div>
                 ))}
               </div>
+              
             </div>
           ))}
         </div>

@@ -10,35 +10,35 @@ export default function AboutUsPage() {
             <h2 className="text-xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-gray-900 mb-6">
               Who We Are
             </h2>
-            <p className="text-gray-700 leading-normal mb-6 text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm">
-              Incorporation.lk is a trusted platform for establishing and
-              managing businesses in Sri Lanka. The system is powered by K R C
-              Corporate Services (Private) Ltd, a registered entity with a
-              holding certificate to practice issued by the Registrar General of
-              Companies. We provide comprehensive support for businesses at
-              every step, ensuring seamless incorporation and ongoing success
-              for your ventures.
+            <p className="text-gray-700 leading-normal mb-6 text-xs md:text-sm lg:text-sm xl:text-sm">
+              Incorporation.lk is a trusted online platform for establishing and
+              managing businesses in Sri Lanka. The system is powered by{" "}
+              <strong> K R C Corporate Services (Private) Ltd</strong>, a
+              registered entity with a holding certificate to practice issued by
+              the Registrar General of Companies.
             </p>
-            <p className="text-gray-700 leading-normal mb-6 text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm">
-              The company was founded with a vision to simplify company
-              registration/incorporation and compliance for entrepreneurs. We
-              ensure that our clients’ businesses adhere to relevant laws,
-              regulations, and standards set by governing bodies or regulatory
-              authorities. This involves meeting legal obligations, filing
-              necessary documents, and adhering to specific guidelines related
-              to business operations, taxation, auditing, reporting, and other
-              regulatory requirements. We pride ourselves on our commitment to
-              excellence, integrity, and client satisfaction.
+            <p className="text-gray-700 leading-normal mb-6 text-xs md:text-sm lg:text-sm xl:text-sm">
+              KRC was founded with a vision to simplify company registration and
+              compliance for entrepreneurs. We ensure that our clients’
+              businesses meet all legal obligations, file the necessary
+              documents, and adhere to the regulations and standards set by
+              governing authorities. This covers business operations, taxation,
+              auditing, reporting, and other compliance requirements.
             </p>
-            <p className="text-gray-700 leading-normal mb-6 text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm">
-              Our team comprises experienced professionals specializing in
-              business registration, corporate secretarial services, accounting,
-              auditing, and compliance management. Together, we strive to
-              empower businesses by providing reliable, efficient, and
-              cost-effective solutions tailored to our clients’ needs. Our
-              mission is to empower businesses by simplifying the complexities
-              of registration and compliance, facilitating seamless operations
-              for our clients and successful business incorporation.
+            <p className="text-gray-700 leading-normal mb-6 text-xs md:text-sm lg:text-sm xl:text-sm">
+              We are also in collaboration with{" "}
+              <strong>Green Stream Systems & Solutions (Private) Ltd</strong> to
+              empower entrepreneurs by delivering complete IT solutions for
+              businesses registered under our platform.
+            </p>
+            <p className="text-gray-700 leading-normal mb-6 text-xs md:text-sm lg:text-sm xl:text-sm">
+              Together, <strong>KRC</strong> and
+              <strong> GreenStream</strong> provide a seamless blend of business
+              compliance expertise and cutting-edge IT solutions, making
+              Incorporation.lk the complete platform for modern entrepreneurs.
+              Our mission is to not only register businesses but also to nurture
+              and empower them with the right support, resources, and technology
+              to achieve lasting success.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <StatsBanner className="sticky bottom-0" />
+      <StatsBanner />
     </div>
   );
 }

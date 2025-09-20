@@ -67,7 +67,7 @@ function Header({ toggleNav, isAtTop }) {
             <HiMenuAlt3
               className={` ${
                 isTransparentHeader
-                  ? "group-hover:text-background text-background/80"
+                  ? "group-hover:text-background text-black/80"
                   : "group-hover:text-primary-foreground text-primary-foreground/80"
               } size-5 cursor-pointer transition-all duration-300 ease-in-out sm:size-6`}
             />
