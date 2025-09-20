@@ -101,12 +101,12 @@ function Footer() {
               >
                 Pricing Options
               </Link>
-              <Link
+              {/* <Link
                 to="#"
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Success Stories
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ function Footer() {
         {/* Bottom Section */}
         <div className="pt-8 mx-10">
           <Separator className={"bg-neutral/25 mt-12 mb-8 w-full"} />
-          <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-2">
             {/* Social Media Icons */}
             <div className="flex items-center space-x-4">
               <a
@@ -162,7 +162,7 @@ function Footer() {
             </div>
 
             {/* Copyright */}
-            <div className="text-right">
+            <div className="text-center">
               <p className="text-sm text-gray-400">
                 © Copyright 2025{" "}
                 <a

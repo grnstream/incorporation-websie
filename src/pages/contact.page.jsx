@@ -11,25 +11,25 @@ const contacts = [
     logo: email,
     description: "Talk to our team to begin your business setup",
     isHighlighted: true,
-    btntext: "contact@incorporation.lk"
+    btntext: "contact@incorporation.lk",
   },
   {
     title: "Chat with Us",
-    logo: chat, 
+    logo: chat,
     description: "We're here to guide you through compliance",
-    btntext: "+94 72 28 99 111"
+    btntext: "+94 72 28 99 111",
   },
   {
     title: "Visit Us",
-    logo: map, 
+    logo: map,
     description: "Come meet us at our office HQ",
-    btntext: "View on Google Maps"
+    btntext: "View on Google Maps",
   },
   {
     title: "Call Us",
-    logo: phone, 
+    logo: phone,
     description: "Mon-Fri, 8am to 5pm",
-    btntext: "+94 112 51 57 56"
+    btntext: "+94 112 51 57 56",
   },
 ];
 
@@ -49,23 +49,21 @@ function ContactPage() {
           </p>
         </div>
       </div>
-      <div className="p-10 bg-neutral-100 rounded-3xl">
-        <LocationMap/>
-      </div>
+
+      <LocationMap />
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl w-full py-12">
-          {contacts.map((contact, index) => (
-            <ServiceCard
-              key={index}
-              title={contact.title}
-              description={contact.description}
-              logo={contact.logo}
-              btntext={contact.btntext}
-            />
-          ))}
-        </div>
+        {contacts.map((contact, index) => (
+          <ServiceCard
+            key={index}
+            title={contact.title}
+            description={contact.description}
+            logo={contact.logo}
+            btntext={contact.btntext}
+          />
+        ))}
+      </div>
     </div>
   );
 }
 export default ContactPage;
-
-

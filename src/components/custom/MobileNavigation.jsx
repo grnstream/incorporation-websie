@@ -11,14 +11,14 @@ import {
   Info,
   Contact,
 } from "lucide-react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 const navItems = [
-  { icon: Home, label: "Home", href: "#home" },
-  { icon: User, label: "About Us", href: "#about" },
-  { icon: BriefcaseBusiness, label: "All Services", href: "" },
-  { icon: Contact, label: "Contact", href: "#contact" },
-  { icon: Info, label: "Policies", href: "#policies" },
+  { icon: Home, label: "Home", to: "/" },
+  { icon: User, label: "About Us", to: "/about" },
+  { icon: BriefcaseBusiness, label: "All Services", to: "/services" },
+  { icon: Contact, label: "Contact", to: "/contact" },
+  { icon: Info, label: "Privacy Policy", to: "/privacy-policy" },
 ];
 
 function MobileNavigation({ setIsOpen, toggleNav }) {
@@ -47,9 +47,9 @@ function MobileNavigation({ setIsOpen, toggleNav }) {
           {navItems.map((item, index) => {
             const IconComponent = item.icon;
             return (
-              <a
+              <Link
                 key={index}
-                href={item.href}
+                to={item.to}
                 className="group hover:bg-primary-100/50 hover:primary-900 flex items-center space-x-4 rounded-lg p-4 text-black transition-all duration-200"
                 onClick={() => setIsOpen(false)}
               >
@@ -58,7 +58,7 @@ function MobileNavigation({ setIsOpen, toggleNav }) {
                   className="transition-transform group-hover:scale-110"
                 />
                 <span className="font-medium">{item.label}</span>
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -81,7 +81,7 @@ function MobileNavigation({ setIsOpen, toggleNav }) {
             <p className="mt-1 text-center text-xs">
               © {year}{" "}
               <a
-                href="https://greenstream.lk/"
+                to="https://greenstream.lk/"
                 target="_blank"
                 className="text-primary-900 font-semibold hover:underline"
               >
