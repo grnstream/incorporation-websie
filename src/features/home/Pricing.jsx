@@ -75,11 +75,11 @@ function Pricing() {
     <section
       id="pricing"
       data-header-style="transparent"
-      className="relative overflow-hidden mt-25"
+      className="relative mt-25"
     >
       <div className="flex flex-col text-center mt-5 transition-all duration-200 max-w-5xl mx-auto">
         <p className="text-5xl lg:text-5xl font-semibold text-center ">
-          Straightforward and Customised Pricing Options
+          Straightforward and Customized Pricing Options
         </p>
         {/* Sub description */}
         <div className="flex mx-auto">
@@ -90,10 +90,10 @@ function Pricing() {
         </div>
       </div>
       <div>
-        <div className="relative mt-12 flex w-full flex-col items-center justify-center overflow-hidden">
+        <div className="relative mt-12 flex w-full flex-col items-center justify-center">
           <PricingCard plans={plans} />
         </div>
-        <InView
+        {/* <InView
           variants={{
             hidden: {
               opacity: 0,
@@ -198,7 +198,7 @@ function Pricing() {
               </div>
             </div>
           </GridBeams>
-        </InView>
+        </InView> */}
       </div>
     </section>
   );

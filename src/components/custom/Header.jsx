@@ -23,7 +23,7 @@ function Header({ toggleNav, isAtTop }) {
 
   return (
     <div
-      className={`mx-auto flex h-[56px] items-center justify-between lg:h-[64px] ${getHeaderStyles()} transition-[width] duration-300 ease-in-out z-50 bg-white `}
+      className={`mx-auto flex h-[56px] items-center justify-between lg:h-[64px] ${getHeaderStyles()} transition-[width] duration-300 ease-in-out z-55 bg-white `}
     >
       <Logo
         logoBlack={!isTransparentHeader || !isAtTop}
