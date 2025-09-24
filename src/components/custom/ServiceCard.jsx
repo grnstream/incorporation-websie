@@ -1,23 +1,27 @@
 import React from "react";
 import { Button } from "../ui/button";
+import { cn } from "@/src/lib/utils";
 
-const ServiceCard = ({ title, description, logo, btntext }) => {
+const ServiceCard = ({ title, description, logo, btntext, className,secondaryIconClassName,secondaryIconBgClassName }) => {
   return (
     <div
-      className={`
-        group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-lg cursor-pointer
-        bg-gradient-to-b hover:text-white from-neutral-50 to-neutral-100 hover:from-primary-400 hover:to-primary-500 text-gray-900 border-1 border-neutral-200
-flex flex-col      
-        `}
+      className={cn(
+        `group relative p-6 rounded-2xl transition-all duration-300 hover:shadow-lg cursor-pointer
+         bg-gradient-to-b from-neutral-50 to-neutral-100 
+         hover:from-primary-400 hover:to-primary-500 
+         hover:text-white text-gray-900 border border-neutral-200
+         flex flex-col`,
+        className 
+      )}
     >
       {/* Icon */}
-      <div className="w-13 h-13 rounded-full flex items-center justify-center mb-10 bg-primary-500 group-hover:bg-white transition-all duration-300">
+      <div className={cn(`w-13 h-13 rounded-full flex items-center justify-center mb-10 bg-primary-500 group-hover:bg-white transition-all duration-300`,secondaryIconBgClassName)}>
         <div
-          className="w-7 h-7 bg-white group-hover:bg-primary-500 transition-all duration-300"
+          className={cn(`w-7 h-7 bg-white group-hover:bg-primary-500 transition-all duration-300`,secondaryIconClassName)}
           style={{
             mask: `url(${logo}) no-repeat center/contain`,
             WebkitMask: `url(${logo}) no-repeat center/contain`,
-          }}       
+          }}
         />
       </div>
 

@@ -86,15 +86,6 @@ function PricingCard({ plans }) {
                   ))}
                 </div>
               </div>
-
-              {/* Hover Container */}
-              <div className="absolute top-full left-0 right-0 bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-b-2xl transform -translate-y-full opacity-0 invisible group-hover:-translate-y-3 group-hover:opacity-100 group-hover:visible transition-all duration-500 ease-out shadow-xl -z-10">
-                <p className="text-sm text-center leading-relaxed">
-                  In addition to the above services, our clients also receive reliable IT support 
-                  from branding and website development to POS, ERP and custom software solutions, 
-                  all at affordable rates designed to make their business journey smooth and successful.
-                </p>
-              </div>
             </div>
           ))}
         </div>

@@ -109,15 +109,16 @@ function ServicesPage() {
           </p>
         </div>
       </div>
-      {/* Banner Image/Video */}
-      <div className="flex bg-neutral w-[1024px] h-[480px] mt-10 rounded-4xl items-center justify-center mb-12"></div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 max-w-6xl w-full">
+      {/* Banner Image/Video */}  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 max-w-6xl w-full">
         {additionalfeatures.map((feature, index) => (
           <ServiceCard
             key={index}
             title={feature.title}
             description={feature.description}
             logo={feature.logo}
+            className="hover:from-green-400 hover:to-green-800"
+            secondaryIconClassName={"group-hover:bg-green-700"}
+            secondaryIconBgClassName={"bg-gradient-to-b from-green-500 to-green-700 group-hover:bg-white group-hover:bg-none"}
           />
         ))}
       </div>

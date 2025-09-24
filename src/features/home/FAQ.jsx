@@ -12,7 +12,7 @@ function FAQ() {
   const navigate = useNavigate();
 
   return (
-    <section id="faq" className="container/fluid mt-[120px] mb-[100px] w-full">
+    <section id="faq" className="container/fluid mt-[140px] mb-[100px] w-full">
       <div className="grid gap-5 lg:grid-cols-2 lg:gap-9 transition duration-500">
         {/* Left side - Title and description */}
         <div className="flex flex-col text-center items-center lg:items-start lg:text-left">

@@ -4,7 +4,13 @@ import { Button } from "@/src/components/ui/button";
 import { Plane } from "lucide-react";
 import gsLogo from "@/public/gs-logo.png";
 import InteractiveSelector from "@/src/components/ui/interactive-selector";
-import herobanner from "@/src/assets/hero-banner.png";
+import herobanner1 from "@/src/assets/hero-banner1.jpg";
+import herobanner2 from "@/src/assets/hero-banner2.jpg";
+import herobanner3 from "@/src/assets/hero-banner3.jpg";
+import herobanner4 from "@/src/assets/hero-banner4.jpg";
+import herobanner5 from "@/src/assets/hero-banner5.jpg";
+import { useEffect, useState, useRef } from "react";
+
 const customers = [
   {
     customer: "GreenStream",
@@ -24,9 +30,58 @@ const customers = [
   },
 ];
 
+const TRANSITION_DURATION = 800;
+const SLIDE_INTERVAL = 6000;
+
 function Hero() {
+  const heroImages = [
+    herobanner1,
+    herobanner2,
+    herobanner3,
+    herobanner4,
+    herobanner5,
+  ];
+  const arrayLength = heroImages.length;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [nextIndex, setNextIndex] = useState(0);
+  const [fade, setFade] = useState(false);
+  const [inView, setInView] = useState(false); // for section visibility
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+
+  useEffect(() => {
+  
+    const intervalId = setInterval(() => {
+      setFade(true);
+      setNextIndex((prevNextIndex) => (prevNextIndex + 1) % arrayLength);
+    }, SLIDE_INTERVAL); 
+    const timeoutId = setTimeout(() => {
+      if (fade) {
+        setCurrentIndex(
+          (prevCurrentIndex) => (prevCurrentIndex + 1) % arrayLength
+        );
+        setFade(false);
+      }
+    }, TRANSITION_DURATION);
+
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
+    };
+  }, [arrayLength, fade]); 
+
   return (
     <section
+      ref={sectionRef}
       id="hero"
       data-header-style="transparent"
       className="relative overflow-hidden mt-10"
@@ -100,11 +155,24 @@ function Hero() {
           <InteractiveSelector />
         </div> */}
         {/* Banner Image/Video */}
-        <div className="flex w-[85%] mt-10 rounded-4xl items-center justify-center">
+        <div className="relative flex w-[85%] mt-10 rounded-4xl items-center justify-center h-[500px]">
+          {" "}
+          {/* Added height for container */}
+          {/* Current Image (Fades Out) */}
           <img
-            src={herobanner}
-            className="h-auto w-full rounded-lg object-cover text-transparent"
-            alt="Incorporation.lk - We provide complete solutions for your business"
+            src={heroImages[currentIndex]}
+            className={`absolute h-full w-full rounded-lg object-cover transition-opacity duration-${TRANSITION_DURATION} ease-in-out ${
+              fade ? "opacity-0" : "opacity-100"
+            }`}
+            alt="Hero Banner Current"
+          />
+          {/* Next Image (Fades In) */}
+          <img
+            src={heroImages[nextIndex]}
+            className={`h-full w-full rounded-lg object-cover transition-opacity duration-${TRANSITION_DURATION} ease-in-out ${
+              fade ? "opacity-100" : "opacity-0"
+            }`}
+            alt="Hero Banner Next"
           />
         </div>
         {/* Customers */}
