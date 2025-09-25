@@ -45,7 +45,7 @@ function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState(0);
   const [fade, setFade] = useState(false);
-  const [inView, setInView] = useState(false); // for section visibility
+  const [inView, setInView] = useState(false); 
   const sectionRef = useRef(null);
 
   useEffect(() => {

@@ -67,22 +67,54 @@ function Pricing() {
   const additionalContent = [
     {
       name: "Kickstart",
-      additional: "kickstart blaallal gglffa ngsk falknd gkdglk",
+      additional: (
+        <div className="space-y-2">
+          <div>Any additional directors: 3,000 LKR each</div>
+          <div>On request embossed seal: 3,500 LKR</div>
+          <div>On request share certificate book: 5,000 LKR</div>
+          <div>Export, import registration: 10,000 LKR</div>
+          <div>Trademark registration: 15,000 LKR</div>
+        </div>
+      ),
     },
     {
       name: "Momentum",
-      additional: "momentum ngsk falknd gkdglk",
+      additional: (
+        <div className="space-y-2">
+          <div>Any additional directors: 3,000 LKR each</div>
+          <div>On request embossed seal: 3,500 LKR</div>
+          <div>On request share certificate book: 5,000 LKR</div>
+          <div>Export, import registration: 10,000 LKR</div>
+          <div>Trademark registration: 15,000 LKR</div>
+        </div>
+      ),
     },
     {
       name: "Elevate",
-      additional: "elevate gglffa ngsk falknd gkdglk",
+      additional: (
+        <div className="space-y-2 ">
+          <div>Any additional directors: 3,000 LKR each</div>
+          <div>On request embossed seal: 3,500 LKR</div>
+          <div>On request share certificate book: 5,000 LKR</div>
+          <div>Export, import registration: 10,000 LKR</div>
+          <div>Trademark registration: 15,000 LKR</div>
+        </div>
+      ),
     },
   ];
   const timeoutRef = useRef();
   const [hoveredPlan, setHoveredPlan] = useState(null);
-  const activeContent =
-    additionalContent.find((c) => c.name === hoveredPlan)?.additional ??
-    "In addition to the above services, our clients also receive reliable IT support from branding and website development to POS, ERP and custom software solutions, all at affordable rates designed to make their business journey smooth and successful.";
+
+  const activeContent = additionalContent.find((c) => c.name === hoveredPlan)
+    ?.additional ?? (
+    <p>
+      In addition to the above services, our clients also receive reliable IT
+      support from branding and website development to POS, ERP and custom
+      software solutions, all at affordable rates designed to make their
+      business journey smooth and successful.
+    </p>
+  );
+
   const handleMouseEnter = (name) => {
     clearTimeout(timeoutRef.current);
     setHoveredPlan(name);
@@ -225,7 +257,7 @@ function Pricing() {
             </div>
           </div>
 
-          <div className="flex px-4 pb-24 w-full">
+          <div className="flex px-4 pb-4 w-full">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -243,11 +275,12 @@ function Pricing() {
                   filter: "blur(0px)",
                 },
               }}
-              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 py-10 rounded-2xl shadow-xl w-full max-w-6xl mx-auto"
+              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 py-12 rounded-2xl shadow-xl w-full max-w-6xl mx-auto"
             >
-              <p className="text-md text-center leading-relaxed">
+              <div className="flex flex-col justify-center h-38 text-center text-md leading-relaxed">
                 {activeContent}
-              </p>
+                <p className="text-xs mt-5">* Condtions Applied</p>
+              </div>
             </motion.div>
           </div>
         </div>
