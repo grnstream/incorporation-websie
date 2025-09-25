@@ -4,11 +4,11 @@ import { Button } from "@/src/components/ui/button";
 import { Plane } from "lucide-react";
 import gsLogo from "@/public/gs-logo.png";
 import InteractiveSelector from "@/src/components/ui/interactive-selector";
-import herobanner1 from "@/src/assets/hero-banner1.jpg";
-import herobanner2 from "@/src/assets/hero-banner2.jpg";
-import herobanner3 from "@/src/assets/hero-banner3.jpg";
-import herobanner4 from "@/src/assets/hero-banner4.jpg";
-import herobanner5 from "@/src/assets/hero-banner5.jpg";
+import herobanner1 from "@/src/assets/images/hero-banner1.jpg";
+import herobanner2 from "@/src/assets/images/hero-banner2.jpg";
+import herobanner3 from "@/src/assets/images/hero-banner3.jpg";
+import herobanner4 from "@/src/assets/images/hero-banner4.jpg";
+import herobanner5 from "@/src/assets/images/hero-banner5.jpg";
 import { useEffect, useState, useRef } from "react";
 
 const customers = [
