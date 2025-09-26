@@ -47,11 +47,17 @@ function TermsAndConditionsPage() {
             <div className="space-y-4">
               <OrderedList
                 items={[
-                  "Incorporation.lk offers two subscription plans: Basic and Advanced.",
-                  "The Basic subscription is ideal for single-director company registration and is valid for three months from the date of subscription.",
-                  "For quotes on Advanced subscription options, please email/call us at contact@incorporation.lk, specifying any additional services you require.",
+                  "Incorporation.lk offers three subscription plans: Kickstart, Momentum and Elevate.",
+                  "The Kickstart package is ideal for entrepreneurs who wish to legally register their business and gain official recognition with all the essentials.",
+                  "The Momentum package is perfect for entrepreneurs seeking a smooth and affordable start to their business journey.",
+                  "The Elevate package is perfect for entrepreneurs ready to launch with impact, start operations quickly, and grow with confidence.",
                   "Incorporation.lk may adjust subscription fees due to factors such as inflation, the introduction of additional services, operational costs, or changes in taxes.",
-                  "For further details, visit Pricing Options on the incorporation.lk website. Prices are subject to change without notice. Any promotions, coupons, or discounts are time-limited and may be subject to additional terms.",
+                  "Prices are subject to change without notice. ",
+                  "Any promotions, coupons, or discounts are time-limited and may be subject to additional terms.",
+                  "All free services included in the packages must be claimed within one (1) year from the date of company registration.",
+                  "Domain registration is not included in the Elevate Package.",
+                  "Additional services (extra directors, embossed seal, share certificate book, export/import registration, trademark registration) are chargeable separately.",
+                  "For quotes on additional services, please contact us at contact@incorporation.lk or call us, specifying the services you require.",
                 ]}
               />
             </div>

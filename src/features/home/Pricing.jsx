@@ -2,6 +2,7 @@ import { Button } from "@/src/components/ui/button";
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import { Separator } from "@radix-ui/react-separator";
 
 function Pricing() {
   const plans = [
@@ -68,36 +69,112 @@ function Pricing() {
     {
       name: "Kickstart",
       additional: (
-        <div className="space-y-2">
-          <div>Any additional directors: 3,000 LKR each</div>
-          <div>On request embossed seal: 3,500 LKR</div>
-          <div>On request share certificate book: 5,000 LKR</div>
-          <div>Export, import registration: 10,000 LKR</div>
-          <div>Trademark registration: 15,000 LKR</div>
+           <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left justify-self-center">
+            <div className="md:pr-5 text-sm lg:text-base font-semibold border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
+              <div className="block mb-2">Additional Directors</div>
+              <div className="text-xs md:text-sm opacity-80">
+                3,000 LKR each
+              </div>
+            </div>
+            <div className="flex flex-col md:px-5 border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
+              <div className="text-sm lg:text-base font-semibold mb-2">
+                On Request Services
+              </div>
+              <div className="text-xs md:text-sm opacity-80 mb-1">
+                Embossed seal: 3,500 LKR
+              </div>
+              <div className="text-xs md:text-sm opacity-80">
+                Share certificate book: 5,000 LKR
+              </div>
+            </div>
+            <div className="flex flex-col md:pl-5">
+              <div className="text-sm lg:text-base font-semibold mb-2">
+                Registrations
+              </div>
+              <div className="text-xs md:text-sm opacity-80 mb-1">
+                Export, import: 10,000 LKR
+              </div>
+              <div className="text-xs md:text-sm opacity-80">
+                Trademark: 15,000 LKR
+              </div>
+            </div>
+          </div>
         </div>
       ),
     },
     {
       name: "Momentum",
       additional: (
-        <div className="space-y-2">
-          <div>Any additional directors: 3,000 LKR each</div>
-          <div>On request embossed seal: 3,500 LKR</div>
-          <div>On request share certificate book: 5,000 LKR</div>
-          <div>Export, import registration: 10,000 LKR</div>
-          <div>Trademark registration: 15,000 LKR</div>
+           <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left justify-self-center">
+            <div className="md:pr-5 text-sm lg:text-base font-semibold border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
+              <div className="block mb-2">Additional Directors</div>
+              <div className="text-xs md:text-sm opacity-80">
+                3,000 LKR each
+              </div>
+            </div>
+            <div className="flex flex-col md:px-5 border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
+              <div className="text-sm lg:text-base font-semibold mb-2">
+                On Request Services
+              </div>
+              <div className="text-xs md:text-sm opacity-80 mb-1">
+                Embossed seal: 3,500 LKR
+              </div>
+              <div className="text-xs md:text-sm opacity-80">
+                Share certificate book: 5,000 LKR
+              </div>
+            </div>
+            <div className="flex flex-col md:pl-5">
+              <div className="text-sm lg:text-base font-semibold mb-2">
+                Registrations
+              </div>
+              <div className="text-xs md:text-sm opacity-80 mb-1">
+                Export, import: 10,000 LKR
+              </div>
+              <div className="text-xs md:text-sm opacity-80">
+                Trademark: 15,000 LKR
+              </div>
+            </div>
+          </div>
         </div>
       ),
     },
     {
       name: "Elevate",
       additional: (
-        <div className="space-y-2 ">
-          <div>Any additional directors: 3,000 LKR each</div>
-          <div>On request embossed seal: 3,500 LKR</div>
-          <div>On request share certificate book: 5,000 LKR</div>
-          <div>Export, import registration: 10,000 LKR</div>
-          <div>Trademark registration: 15,000 LKR</div>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col justify-self-center md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left">
+            <div className="md:pr-5 text-sm lg:text-base font-semibold border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
+              <div className="block mb-2 text-xs">Additional Directors</div>
+              <div className="text-xs md:text-sm opacity-80">
+                3,000 LKR each
+              </div>
+            </div>
+            <div className="flex flex-col md:px-5 border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
+              <div className="text-xs lg:text-base font-semibold mb-2">
+                On Request Services
+              </div>
+              <div className="text-xs md:text-sm opacity-80 mb-1">
+                Embossed seal: 3,500 LKR
+              </div>
+              <div className="text-xs md:text-sm opacity-80">
+                Share certificate book: 5,000 LKR
+              </div>
+            </div>
+            <div className="flex flex-col md:pl-5">
+              <div className="text-xs lg:text-base font-semibold mb-2">
+                Registrations
+              </div>
+              <div className="text-xs md:text-sm opacity-80 mb-1">
+                Export, import: 10,000 LKR
+              </div>
+              <div className="text-xs md:text-sm opacity-80">
+                Trademark: 15,000 LKR
+              </div>
+            </div>
+          </div>
+          <div className="text-xs">* Conditions Applied</div>
         </div>
       ),
     },
@@ -150,7 +227,7 @@ function Pricing() {
 
       <div>
         <div className="relative mt-12 flex w-full flex-col items-center justify-center">
-          <div className="min-h-[100vh] py-10 px-4">
+          <div className="min-h-[80vh] py-10 px-4">
             <div className="max-w-7xl mx-auto">
               {/* Pricing Cards */}
               <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
@@ -271,20 +348,19 @@ function Pricing() {
                 },
                 visible: {
                   opacity: 1,
-                  y: 20,
+                  y: -10,
                   filter: "blur(0px)",
                 },
               }}
               className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 py-12 rounded-2xl shadow-xl w-full max-w-6xl mx-auto"
             >
-              <div className="flex flex-col justify-center h-38 text-center text-md leading-relaxed">
+              <div className="flex flex-col justify-center h-42 text-center text-md leading-relaxed">
                 {activeContent}
-                <p className="text-xs mt-5">* Condtions Applied</p>
               </div>
             </motion.div>
           </div>
         </div>
-        <div className="flex px-4 pb-24"></div>
+        <div className="flex px-4 pb-14"></div>
       </div>
     </section>
   );
