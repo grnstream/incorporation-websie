@@ -5,6 +5,9 @@ import { useRef, useState } from "react";
 import { Separator } from "@radix-ui/react-separator";
 
 function Pricing() {
+  const timeoutRef = useRef();
+  const [hoveredPlan, setHoveredPlan] = useState(null);
+
   const plans = [
     {
       name: "Kickstart",
@@ -65,39 +68,47 @@ function Pricing() {
     },
   ];
 
+  const defaultHighlighted = plans.find((p) => p.isHighlighted)?.name;
+
+  const isPlanActive = (plan) => {
+    if (hoveredPlan) return hoveredPlan === plan.name; // if hovering → show hovered
+    return plan.isHighlighted; // otherwise fallback to recommended
+  };
+
   const additionalContent = [
     {
       name: "Kickstart",
       additional: (
-           <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left justify-self-center">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col justify-self-center md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left">
             <div className="md:pr-5 text-sm lg:text-base font-semibold border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
-              <div className="block mb-2">Additional Directors</div>
+              <div className="block mb-2 text-sm">Additional Directors</div>
               <div className="text-xs md:text-sm opacity-80">
                 3,000 LKR each
               </div>
             </div>
             <div className="flex flex-col md:px-5 border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
-              <div className="text-sm lg:text-base font-semibold mb-2">
+              <div className="text-sm font-semibold mb-2">
                 On Request Services
               </div>
-              <div className="text-xs md:text-sm opacity-80 mb-1">
+              <div className="text-xs md:text-sm  opacity-80 mb-1">
                 Embossed seal: 3,500 LKR
               </div>
-              <div className="text-xs md:text-sm opacity-80">
+              <div className="text-xs md:text-sm  opacity-80">
                 Share certificate book: 5,000 LKR
               </div>
             </div>
-            <div className="flex flex-col md:pl-5">
-              <div className="text-sm lg:text-base font-semibold mb-2">
-                Registrations
-              </div>
-              <div className="text-xs md:text-sm opacity-80 mb-1">
+            <div className="flex flex-col md:px-5 border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
+              <div className="text-sm font-semibold mb-2">Registrations</div>
+              <div className="text-xs md:text-sm  opacity-80 mb-1">
                 Export, import: 10,000 LKR
               </div>
-              <div className="text-xs md:text-sm opacity-80">
+              <div className="text-xs md:text-sm  opacity-80">
                 Trademark: 15,000 LKR
               </div>
+            </div>
+            <div className="flex flex-col ">
+              <div className="text-sm">* Conditions Applied</div>
             </div>
           </div>
         </div>
@@ -106,35 +117,36 @@ function Pricing() {
     {
       name: "Momentum",
       additional: (
-           <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left justify-self-center">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col justify-self-center md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left">
             <div className="md:pr-5 text-sm lg:text-base font-semibold border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
-              <div className="block mb-2">Additional Directors</div>
+              <div className="block mb-2 text-sm">Additional Directors</div>
               <div className="text-xs md:text-sm opacity-80">
                 3,000 LKR each
               </div>
             </div>
             <div className="flex flex-col md:px-5 border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
-              <div className="text-sm lg:text-base font-semibold mb-2">
+              <div className="text-sm font-semibold mb-2">
                 On Request Services
               </div>
-              <div className="text-xs md:text-sm opacity-80 mb-1">
+              <div className="text-xs md:text-sm  opacity-80 mb-1">
                 Embossed seal: 3,500 LKR
               </div>
-              <div className="text-xs md:text-sm opacity-80">
+              <div className="text-xs md:text-sm  opacity-80">
                 Share certificate book: 5,000 LKR
               </div>
             </div>
-            <div className="flex flex-col md:pl-5">
-              <div className="text-sm lg:text-base font-semibold mb-2">
-                Registrations
-              </div>
-              <div className="text-xs md:text-sm opacity-80 mb-1">
+            <div className="flex flex-col md:px-5 border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
+              <div className="text-sm font-semibold mb-2">Registrations</div>
+              <div className="text-xs md:text-sm  opacity-80 mb-1">
                 Export, import: 10,000 LKR
               </div>
-              <div className="text-xs md:text-sm opacity-80">
+              <div className="text-xs md:text-sm  opacity-80">
                 Trademark: 15,000 LKR
               </div>
+            </div>
+            <div className="flex flex-col ">
+              <div className="text-sm">* Conditions Applied</div>
             </div>
           </div>
         </div>
@@ -146,41 +158,39 @@ function Pricing() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col justify-self-center md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left">
             <div className="md:pr-5 text-sm lg:text-base font-semibold border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
-              <div className="block mb-2 text-xs">Additional Directors</div>
+              <div className="block mb-2 text-sm">Additional Directors</div>
               <div className="text-xs md:text-sm opacity-80">
                 3,000 LKR each
               </div>
             </div>
             <div className="flex flex-col md:px-5 border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
-              <div className="text-xs lg:text-base font-semibold mb-2">
+              <div className="text-sm font-semibold mb-2">
                 On Request Services
               </div>
-              <div className="text-xs md:text-sm opacity-80 mb-1">
+              <div className="text-xs md:text-sm  opacity-80 mb-1">
                 Embossed seal: 3,500 LKR
               </div>
-              <div className="text-xs md:text-sm opacity-80">
+              <div className="text-xs md:text-sm  opacity-80">
                 Share certificate book: 5,000 LKR
               </div>
             </div>
-            <div className="flex flex-col md:pl-5">
-              <div className="text-xs lg:text-base font-semibold mb-2">
-                Registrations
-              </div>
-              <div className="text-xs md:text-sm opacity-80 mb-1">
+            <div className="flex flex-col md:px-5 border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
+              <div className="text-sm font-semibold mb-2">Registrations</div>
+              <div className="text-xs md:text-sm  opacity-80 mb-1">
                 Export, import: 10,000 LKR
               </div>
-              <div className="text-xs md:text-sm opacity-80">
+              <div className="text-xs md:text-sm  opacity-80">
                 Trademark: 15,000 LKR
               </div>
             </div>
+            <div className="flex flex-col ">
+              <div className="text-sm">* Conditions Applied</div>
+            </div>
           </div>
-          <div className="text-xs">* Conditions Applied</div>
         </div>
       ),
     },
   ];
-  const timeoutRef = useRef();
-  const [hoveredPlan, setHoveredPlan] = useState(null);
 
   const activeContent = additionalContent.find((c) => c.name === hoveredPlan)
     ?.additional ?? (
@@ -192,14 +202,7 @@ function Pricing() {
     </p>
   );
 
-  const handleMouseEnter = (name) => {
-    clearTimeout(timeoutRef.current);
-    setHoveredPlan(name);
-  };
 
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setHoveredPlan(null), 100);
-  };
   return (
     <section
       id="pricing"
@@ -235,16 +238,16 @@ function Pricing() {
                   <div
                     key={index}
                     className="group relative transition-all duration-300 hover:scale-105"
-                    onMouseEnter={() => handleMouseEnter(plan.name)}
-                    onMouseLeave={handleMouseLeave}
+                    onMouseEnter={() => setHoveredPlan(plan.name)}
+                    onMouseLeave={() => setHoveredPlan(null)}
                   >
                     {/* Main Card */}
                     <div
-                      className={`rounded-2xl p-8 relative z-0 h-full flex flex-col ${
-                        plan.isHighlighted
+                      className={`rounded-2xl p-8 relative z-0 h-full flex flex-col  ${
+                        isPlanActive(plan)
                           ? "bg-gradient-to-b from-primary-400 to-primary-500 text-white shadow-2xl"
                           : "bg-white text-gray-900 shadow-lg"
-                      } transition-all duration-300 hover:shadow-xl `}
+                      } transition-all duration-500 hover:shadow-xl`}
                     >
                       {/* Plan Header */}
                       <div className="mb-6">
@@ -252,7 +255,7 @@ function Pricing() {
                         <div className="h-12 lg:h-20 overflow-hidden">
                           <p
                             className={`text-xs sm:text-sm mb-4 text-start ${
-                              plan.isHighlighted
+                              isPlanActive(plan)
                                 ? "text-blue-100"
                                 : "text-gray-600"
                             }`}
@@ -266,7 +269,7 @@ function Pricing() {
                           </span>
                           <span
                             className={`text-sm ml-1 ${
-                              plan.isHighlighted
+                              isPlanActive(plan)
                                 ? "text-blue-200"
                                 : "text-gray-500"
                             }`}
@@ -286,9 +289,9 @@ function Pricing() {
                           )
                         }
                         className={`w-full py-6 px-6 rounded-full font-medium mb-8 transition-all duration-300 ${
-                          plan.isHighlighted
+                          isPlanActive(plan)
                             ? "bg-white text-blue-500 hover:bg-gray-100"
-                            : "bg-gradient-to-b from-primary-400 to-primary-500 text-white hover:bg-gradient-to-t transition-colors duration-300"
+                            : "bg-gradient-to-b from-primary-400 to-primary-500 text-white hover:bg-gradient-to-t"
                         }`}
                       >
                         {plan.buttonText}
@@ -303,21 +306,21 @@ function Pricing() {
                           >
                             <div
                               className={`rounded-full p-1 mt-0.5 flex-shrink-0 ${
-                                plan.isHighlighted ? "bg-white" : "bg-blue-500"
+                                isPlanActive(plan) ? "bg-white" : "bg-blue-500"
                               }`}
                             >
                               <Check
                                 size={12}
-                                className={`${
-                                  plan.isHighlighted
+                                className={
+                                  isPlanActive(plan)
                                     ? "text-blue-500"
                                     : "text-white"
-                                }`}
+                                }
                               />
                             </div>
                             <span
                               className={`text-sm leading-relaxed ${
-                                plan.isHighlighted
+                                isPlanActive(plan)
                                   ? "text-white"
                                   : "text-gray-700"
                               }`}
@@ -360,7 +363,6 @@ function Pricing() {
             </motion.div>
           </div>
         </div>
-        <div className="flex px-4 pb-14"></div>
       </div>
     </section>
   );

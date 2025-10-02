@@ -138,7 +138,7 @@ function ServicesPage() {
       </div>
       <div className="w-full max-w-6xl rounded-3xl bg-gradient-to-b from-primary-500 to-primary-600 py-4 mb-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/20 items-start">
             {services.map((service, index) => (
               <div
                 key={index}

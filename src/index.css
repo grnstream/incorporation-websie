@@ -32,6 +32,15 @@
   --font-main: "Inter", sans-serif;
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px); /* limit bounce height */
+  }
+}
+
 @layer base {
   body {
     @apply bg-background text-primary-foreground font-main;

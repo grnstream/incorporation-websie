@@ -3,13 +3,14 @@ import { Badge } from "@/src/components/ui/badge";
 import { Button } from "@/src/components/ui/button";
 import { Plane } from "lucide-react";
 import gsLogo from "@/public/gs-logo.png";
-import InteractiveSelector from "@/src/components/ui/interactive-selector";
 import herobanner1 from "@/src/assets/images/hero-banner1.jpg";
 import herobanner2 from "@/src/assets/images/hero-banner2.jpg";
 import herobanner3 from "@/src/assets/images/hero-banner3.jpg";
 import herobanner4 from "@/src/assets/images/hero-banner4.jpg";
 import herobanner5 from "@/src/assets/images/hero-banner5.jpg";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router";
 
 const customers = [
   {
@@ -34,6 +35,7 @@ const TRANSITION_DURATION = 800;
 const SLIDE_INTERVAL = 6000;
 
 function Hero() {
+  const navigate = useNavigate();
   const heroImages = [
     herobanner1,
     herobanner2,
@@ -41,47 +43,19 @@ function Hero() {
     herobanner4,
     herobanner5,
   ];
-  const arrayLength = heroImages.length;
+
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [nextIndex, setNextIndex] = useState(0);
-  const [fade, setFade] = useState(false);
-  const [inView, setInView] = useState(false); 
-  const sectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.2 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+    }, SLIDE_INTERVAL);
 
-
-  useEffect(() => {
-  
-    const intervalId = setInterval(() => {
-      setFade(true);
-      setNextIndex((prevNextIndex) => (prevNextIndex + 1) % arrayLength);
-    }, SLIDE_INTERVAL); 
-    const timeoutId = setTimeout(() => {
-      if (fade) {
-        setCurrentIndex(
-          (prevCurrentIndex) => (prevCurrentIndex + 1) % arrayLength
-        );
-        setFade(false);
-      }
-    }, TRANSITION_DURATION);
-
-    return () => {
-      clearInterval(intervalId);
-      clearTimeout(timeoutId);
-    };
-  }, [arrayLength, fade]); 
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   return (
     <section
-      ref={sectionRef}
       id="hero"
       data-header-style="transparent"
       className="relative overflow-hidden mt-10"
@@ -133,9 +107,10 @@ function Hero() {
             variant={"default"}
             className={"rounded-full min-w-[120px]"}
             size={"lg"}
+            onClick={()=>navigate('/incobot')}
           >
             <SparklesText sparklesCount={3} className={"text-primary-50"}>
-              Incorp Al
+              IncoBot
             </SparklesText>
           </Button>
           <Button
@@ -151,29 +126,19 @@ function Hero() {
             Get Started
           </Button>
         </div>
-        {/* <div className="w-full">
-          <InteractiveSelector />
-        </div> */}
+
         {/* Banner Image/Video */}
-        <div className="relative flex w-[85%] mt-10 rounded-4xl items-center justify-center h-[500px]">
-          {" "}
-          {/* Added height for container */}
-          {/* Current Image (Fades Out) */}
-          <img
-            src={heroImages[currentIndex]}
-            className={`absolute h-full w-full rounded-lg object-cover transition-opacity duration-${TRANSITION_DURATION} ease-in-out ${
-              fade ? "opacity-0" : "opacity-100"
-            }`}
-            alt="Hero Banner Current"
-          />
-          {/* Next Image (Fades In) */}
-          <img
-            src={heroImages[nextIndex]}
-            className={`h-full w-full rounded-lg object-cover transition-opacity duration-${TRANSITION_DURATION} ease-in-out ${
-              fade ? "opacity-100" : "opacity-0"
-            }`}
-            alt="Hero Banner Next"
-          />
+        <div className="relative flex w-[85%] aspect-[16/8] mt-5 items-center justify-center overflow-hidden rounded-lg">
+          {heroImages.map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt="Hero Banner"
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                i === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
         </div>
         {/* Customers */}
         <div className="flex flex-col bg-white mt-10 rounded-4xl items-center justify-center text-neutral-900">

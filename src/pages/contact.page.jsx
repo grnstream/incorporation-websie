@@ -12,6 +12,7 @@ const contacts = [
     description: "Talk to our team to begin your business setup",
     isHighlighted: true,
     btntext: "contact@incorporation.lk",
+    href: "mailto:contact@incorporation.lk"
   },
   {
     title: "Chat with Us",
