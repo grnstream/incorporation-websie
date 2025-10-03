@@ -4,8 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const FloatingContactWidget = () => {
   const handleWhatsAppClick = () => {
-    // Replace with your WhatsApp number (in international format without + or spaces)
-    const phoneNumber = '1234567890';
+    const phoneNumber = '94722899111';
     const message = 'Hello! I would like to get in touch.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -13,12 +12,12 @@ const FloatingContactWidget = () => {
 
   const handlePhoneClick = () => {
     // Replace with your phone number
-    const phoneNumber = '+1234567890';
+    const phoneNumber = '+94112515756';
     window.location.href = `tel:${phoneNumber}`;
   };
 
   return (
-    <div className="fixed right-10 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-3">
+    <div className="fixed right-10 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-5">
       {/* WhatsApp Button */}
       <button
         onClick={handleWhatsAppClick}

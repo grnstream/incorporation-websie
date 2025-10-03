@@ -12,25 +12,28 @@ const contacts = [
     description: "Talk to our team to begin your business setup",
     isHighlighted: true,
     btntext: "contact@incorporation.lk",
-    href: "mailto:contact@incorporation.lk"
+    onClick: () => window.location.href = "mailto:contact@incorporation.lk"
   },
   {
     title: "Chat with Us",
     logo: chat,
     description: "We're here to guide you through compliance",
     btntext: "+94 72 28 99 111",
+    onClick: () => window.open("https://wa.me/94722899111", "_blank")
   },
   {
     title: "Visit Us",
     logo: map,
     description: "Come meet us at our office HQ",
     btntext: "View on Google Maps",
+    onClick: () => window.open("https://maps.app.goo.gl/YBkd5MCBjEMzx1nF8", "_blank")
   },
   {
     title: "Call Us",
     logo: phone,
     description: "Mon-Fri, 8am to 5pm",
     btntext: "+94 112 51 57 56",
+    onClick: () => window.location.href = "tel:+94112515756"
   },
 ];
 
@@ -61,6 +64,7 @@ function ContactPage() {
             description={contact.description}
             logo={contact.logo}
             btntext={contact.btntext}
+            onClick={contact.onClick}
           />
         ))}
       </div>

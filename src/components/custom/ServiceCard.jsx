@@ -2,7 +2,16 @@ import React from "react";
 import { Button } from "../ui/button";
 import { cn } from "@/src/lib/utils";
 
-const ServiceCard = ({ title, description, logo, btntext, className,secondaryIconClassName,secondaryIconBgClassName }) => {
+const ServiceCard = ({
+  onClick,
+  title,
+  description,
+  logo,
+  btntext,
+  className,
+  secondaryIconClassName,
+  secondaryIconBgClassName,
+}) => {
   return (
     <div
       className={cn(
@@ -11,13 +20,21 @@ const ServiceCard = ({ title, description, logo, btntext, className,secondaryIco
          hover:from-primary-400 hover:to-primary-500 
          hover:text-white text-gray-900 border border-neutral-200
          flex flex-col`,
-        className 
+        className
       )}
     >
       {/* Icon */}
-      <div className={cn(`w-13 h-13 rounded-full flex items-center justify-center mb-10 bg-primary-500 group-hover:bg-white transition-all duration-300`,secondaryIconBgClassName)}>
+      <div
+        className={cn(
+          `w-13 h-13 rounded-full flex items-center justify-center mb-10 bg-primary-500 group-hover:bg-white transition-all duration-300`,
+          secondaryIconBgClassName
+        )}
+      >
         <div
-          className={cn(`w-7 h-7 bg-white group-hover:bg-primary-500 transition-all duration-300`,secondaryIconClassName)}
+          className={cn(
+            `w-7 h-7 bg-white group-hover:bg-primary-500 transition-all duration-300`,
+            secondaryIconClassName
+          )}
           style={{
             mask: `url(${logo}) no-repeat center/contain`,
             WebkitMask: `url(${logo}) no-repeat center/contain`,
@@ -36,7 +53,7 @@ const ServiceCard = ({ title, description, logo, btntext, className,secondaryIco
       </div>
       {btntext && (
         <div className="mt-auto pt-6">
-          <Button variant="default" className={"text-white w-full text-xs"}>
+          <Button variant="default" className={"text-white w-full text-xs group-hover:text-primary-800 group-hover:bg-gradient-to-b group-hover:from-white group-hover:to-primary-100"} onClick={onClick}>
             {btntext}
           </Button>
         </div>
