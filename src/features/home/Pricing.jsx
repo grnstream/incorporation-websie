@@ -35,8 +35,7 @@ function Pricing() {
       isHighlighted: true,
       features: [
         "Includes everything in Starter",
-        "Pre-ink company seal",
-        "Pre-ink director seal",
+        "One Pre-ink director seal",
         "Resolution for corporate bank account opening",
         "TIN registration",
         "Free Accounting & Bookkeeping consultation - Free for 1st year",

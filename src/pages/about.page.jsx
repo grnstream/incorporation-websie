@@ -5,8 +5,8 @@ export default function AboutUsPage() {
   return (
     <div className="flex-col ">
       <section className="bg-white pt-16 pb-0 overflow-hidden relative min-h-screen -z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start relative z-10">
+        <div className="max-w-7xl xl:max-w-5/6 mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-start relative z-10">
             {/* Left Content */}
             <div className="lg:pr-8">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-8 leading-tight">
@@ -66,7 +66,7 @@ export default function AboutUsPage() {
 
               {/* Desktop Image */}
               <div className="hidden lg:block relative">
-                <div className="absolute top-22 flex items-center justify-center rounded-2xl">
+                <div className="absolute top-22 xl:right-[-90px] flex items-center justify-center rounded-2xl">
                   <img
                     src={aboutImage}
                     alt="about-page-image"
@@ -78,7 +78,7 @@ export default function AboutUsPage() {
           </div>
 
           {/* Large Blue Background - positioned absolutely to extend beyond container */}
-          <div className="hidden lg:block absolute top-[60px] right-[-150px] w-[55%] h-[1000px] bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl"></div>
+          <div className="hidden lg:block absolute top-[60px] right-[-150px] xl:right-[-200px] w-[55%] xl:w-[50%] h-[1000px] bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl"></div>
         </div>
       </section>
 
