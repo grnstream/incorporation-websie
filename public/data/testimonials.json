@@ -1,37 +1,23 @@
 [
   {
-    "name": "Mark Reynolds",
-    "designation": "Graphic Designer",
-    "quote": "I love how candidate-friendly the platform is. The Vacancy ID system makes applying feel more personal and direct. ",
-    "image": "",
-    "rating": "4.5"
+    "name": "Chathura Yapa Bandara",
+    "designation": "CEO, Aptinex (PVT) Limited.",
+    "quote": "I highly recommend KRC for corporate secretarial services to any entrepreneur starting in Sri Lanka. I also wish KRC the best with their new digital platform, incorporation.lk",
+    "image": "/src/assets/images/chathura-yapa-bandara.jpg",
+    "rating": "5.0"
   },
   {
-    "name": "Mark Reynolds",
-    "designation": "Graphic Designer",
-    "quote": "I love how candidate-friendly the platform is. The Vacancy ID system makes applying feel more personal and direct. ",
-    "image": "",
-    "rating": "4.5"
+    "name": "Devinda Matharage",
+    "designation": "Director, Lankatronics",
+    "quote": "I wholeheartedly recommend KRC Corporate Services to any business seeking top-notch secretarial and accountancy services. Their dedication to client satisfaction and the breadth of their knowledge make them a valuable asset to any organization.",
+    "image": "/src/assets/images/devinda-matharage.jpg",
+    "rating": "5.0"
   },
   {
-    "name": "Mark Reynolds",
-    "designation": "Graphic Designer",
-    "quote": "I love how candidate-friendly the platform is.",
-    "image": "",
-    "rating": "4.5"
-  },
-  {
-    "name": "Mark Reynolds",
-    "designation": "Graphic Designer",
-    "quote": "I love how candidate-friendly the platform is. The Vacancy ID system makes applying feel more personal and direct. I love how candidate-friendly the platform is. The Vacancy ID system makes applying feel more personal and direct. ",
-    "image": "",
-    "rating": "4.5"
-  },
-  {
-    "name": "Mark Reynolds",
-    "designation": "Graphic Designer",
-    "quote": "I love how candidate-friendly the platform is. The Vacancy ID system makes applying feel more personal and direct. ",
-    "image": "",
+    "name": "Gihan Nadeera De Silva",
+    "designation": "Director, Ceylon Milky Way Pvt Ltd",
+    "quote": "KRC’s support has been invaluable for us. Their team goes above and beyond, providing the guidance and resources we need to stay compliant and succeed. Their commitment to client satisfaction is unmatched.",
+    "image": "/src/assets/images/gihan-nadeera-de-silva.jpg",
     "rating": "4.5"
   }
 ]

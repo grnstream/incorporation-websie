@@ -2,7 +2,9 @@ import { SparklesText } from "@/src/components/magicui/sparkles-text";
 import { Badge } from "@/src/components/ui/badge";
 import { Button } from "@/src/components/ui/button";
 import { Plane } from "lucide-react";
-import gsLogo from "@/public/gs-logo.png";
+import gsLogo from "@/src/assets/logos/gs-logo.png";
+import mensugLogo from "@/src/assets/logos/mensug-logo.png";
+import cameralkLogo from "@/src/assets/logos/cameralk-logo.png";
 import herobanner1 from "@/src/assets/images/hero-banner1.jpg";
 import herobanner2 from "@/src/assets/images/hero-banner2.jpg";
 import herobanner3 from "@/src/assets/images/hero-banner3.jpg";
@@ -18,16 +20,12 @@ const customers = [
     logo: gsLogo,
   },
   {
-    customer: "GreenStream",
-    logo: gsLogo,
+    customer: "CameraLk",
+    logo: cameralkLogo,
   },
   {
-    customer: "GreenStream",
-    logo: gsLogo,
-  },
-  {
-    customer: "GreenStream",
-    logo: gsLogo,
+    customer: "Mensug",
+    logo: mensugLogo,
   },
 ];
 
@@ -37,10 +35,10 @@ const SLIDE_INTERVAL = 6000;
 function Hero() {
   const navigate = useNavigate();
   const heroImages = [
-    herobanner1,
+    herobanner4,
     herobanner2,
     herobanner3,
-    herobanner4,
+    herobanner1,
     herobanner5,
   ];
 
