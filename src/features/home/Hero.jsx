@@ -5,11 +5,11 @@ import { Plane } from "lucide-react";
 import gsLogo from "@/src/assets/logos/gs-logo.png";
 import mensugLogo from "@/src/assets/logos/mensug-logo.png";
 import cameralkLogo from "@/src/assets/logos/cameralk-logo.png";
-import herobanner1 from "@/src/assets/images/hero-banner1.jpg";
-import herobanner2 from "@/src/assets/images/hero-banner2.jpg";
-import herobanner3 from "@/src/assets/images/hero-banner3.jpg";
-import herobanner4 from "@/src/assets/images/hero-banner4.jpg";
-import herobanner5 from "@/src/assets/images/hero-banner5.jpg";
+import herobanner1 from "@/src/assets/images/hero-banner1.png";
+import herobanner2 from "@/src/assets/images/hero-banner2.png";
+import herobanner3 from "@/src/assets/images/hero-banner3.png";
+import herobanner4 from "@/src/assets/images/hero-banner4.png";
+import herobanner5 from "@/src/assets/images/hero-banner5.png";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router";
@@ -35,10 +35,10 @@ const SLIDE_INTERVAL = 6000;
 function Hero() {
   const navigate = useNavigate();
   const heroImages = [
-    herobanner4,
+    herobanner1,
     herobanner2,
     herobanner3,
-    herobanner1,
+    herobanner4,
     herobanner5,
   ];
 

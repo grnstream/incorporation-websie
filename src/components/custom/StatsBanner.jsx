@@ -8,7 +8,7 @@ const statsData = [
     subtitle: "Consultants",
   },
   {
-    number: 1000,
+    number: 750,
     title: "Company",
     subtitle: "Registrations",
   },
