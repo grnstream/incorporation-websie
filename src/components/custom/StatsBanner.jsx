@@ -1,5 +1,6 @@
 import React from "react";
 import { NumberTicker } from "../magicui/number-ticker";
+import { Separator } from "@radix-ui/react-separator";
 
 const statsData = [
   {
@@ -36,12 +37,15 @@ const StatsBanner = () => {
             >
               {/* Number */}
               <div className="flex items-center">
-                <span className="text-3xl font-bold text-white ">+</span>
+                
                 <NumberTicker
                   value={stat.number}
-                  className="whitespace-pre-wrap text-4xl lg:text-4xl font-medium tracking-tighter text-white dark:text-white mr-4"
+                  className="whitespace-pre-wrap text-4xl lg:text-4xl font-medium tracking-tighter text-white dark:text-white "
                 />
+                <span className="text-3xl font-bold text-white mr-3">+</span>
               </div>
+
+              <Separator orientation="vertical" className="h-10 w-px bg-white/20 mx-2"/>
 
               {/* Title + Subtitle */}
               <div className="flex flex-col text-left">

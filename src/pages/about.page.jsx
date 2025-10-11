@@ -13,7 +13,7 @@ export default function AboutUsPage() {
                 Who We Are
               </h2>
 
-              <div className="space-y-6 text-justify">
+              <div className="space-y-6 text-start">
                 <p className="text-gray-700 leading-relaxed text-sm md:text-base lg:text-lg">
                   Incorporation.lk is a trusted online platform for establishing
                   and managing businesses in Sri Lanka. The system is powered by{" "}

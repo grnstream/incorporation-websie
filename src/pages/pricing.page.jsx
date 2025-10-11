@@ -17,7 +17,6 @@ function PricingPage() {
         "Form 1, Form 18 & Form 19",
         "Articles of association",
         "Incorporation certificate (printed copy)",
-        "TIN registration",
         "Online client portal access",
         "Company secretary for registration purpose - no upfront charges",
       ],
