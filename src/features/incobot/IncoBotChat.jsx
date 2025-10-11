@@ -54,7 +54,7 @@ export default function IncoBotChat() {
     ]);
 
     try {
-      const API_URL = "http://127.0.0.1:8000";
+      const API_URL = "https://platform.incorporation.lk/api/chatbot";
       const response = await fetch(`${API_URL}/ask/stream`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -316,7 +316,7 @@ export default function IncoBotChat() {
 
           {/* Input Area */}
           <div className="sticky bottom-0 p-1 border-t border-gray-200">
-            <div className="flex gap-3 items-center bg-gray-50 rounded-2xl p-4 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
+            <div className="flex gap-3 items-center bg-gray-50 rounded-2xl p-4 mt-2 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
               <textarea
                 rows={2}
                 type="text"
