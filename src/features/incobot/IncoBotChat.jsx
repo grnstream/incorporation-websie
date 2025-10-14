@@ -202,27 +202,27 @@ export default function IncoBotChat() {
           {messages.length === 0 ? (
             /* Welcome Screen */
             <div className="flex-1 flex flex-col items-center justify-center p-12 text-center">
-              <div className="flex items-center gap-3 mb-6">
-                <h1 className="text-5xl font-bold text-gray-900">
+              <div className="flex flex-col lg:flex-row items-center gap-3 mb-6">
+                <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
                   Start talking to
                 </h1>
-                <div className="flex-shrink-0">
+                <div className="flex items-center gap-3 justify-center">
                   <img
                     src={botHead}
                     alt="IncoBot"
-                    className="w-25 h-auto object-contain"
+                    className="w-15 md:w-25 h-auto object-contain"
                   />
+                  <h1 className="text-3xl md:text-5xl font-bold text-blue-600">
+                    IncoBot
+                  </h1>
                 </div>
-                <h1 className="text-5xl font-bold text-blue-600">IncoBot</h1>
               </div>
 
-              <div className="space-y-2 text-gray-600 max-w-2xl">
-                <p className="text-lg">Starting a business in Sri Lanka?</p>
+              <div className="space-y-2 text-gray-600 max-w-2xl justify-items-start">
                 <p className="text-lg">
-                  Need quick guidance on registration, compliance, or documents?
-                </p>
-                <p className="text-lg">
-                  IncoBot is here to support you in every step of the way.
+                  Starting a business in Sri Lanka? Need quick guidance on
+                  registration, compliance, or documents? IncoBot is here to
+                  support you in every step of the way.
                 </p>
               </div>
             </div>
@@ -315,7 +315,7 @@ export default function IncoBotChat() {
           )}
 
           {/* Input Area */}
-          <div className="sticky bottom-0 p-1 border-t border-gray-200">
+          <div className="sticky bottom-0 p-1 ">
             <div className="flex gap-3 items-center bg-gray-50 rounded-2xl p-4 mt-2 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
               <textarea
                 rows={2}

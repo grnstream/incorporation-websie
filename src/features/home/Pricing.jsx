@@ -1,11 +1,9 @@
 import { Button } from "@/src/components/ui/button";
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
-import { Separator } from "@radix-ui/react-separator";
+import { useState } from "react";
 
 function Pricing() {
-  const timeoutRef = useRef();
   const [hoveredPlan, setHoveredPlan] = useState(null);
 
   const plans = [
@@ -65,8 +63,6 @@ function Pricing() {
       ],
     },
   ];
-
-  const defaultHighlighted = plans.find((p) => p.isHighlighted)?.name;
 
   const isPlanActive = (plan) => {
     if (hoveredPlan) return hoveredPlan === plan.name; // if hovering → show hovered
@@ -208,7 +204,7 @@ function Pricing() {
       className="container/fluid relative mt-25 mb-10"
     >
       <div className="flex flex-col text-center mt-5 transition-all duration-200 max-w-5xl mx-auto cursor-default">
-        <p className="text-5xl lg:text-5xl font-semibold text-center ">
+        <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center ">
           Straightforward and Customized Pricing Options
         </p>
         {/* Sub description */}

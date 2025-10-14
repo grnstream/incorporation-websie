@@ -59,13 +59,13 @@ function Hero() {
       className="relative overflow-hidden mt-10"
     >
       {/* Background Image */}
-      <div className="fixed inset-0 -z-10 flex items-center justify-center p-4">
+      {/* <div className="fixed inset-0 -z-10 flex items-center justify-center p-4">
         <img
           src="/Pattern.png"
           className="h-[92%] lg:w-[91vw] xl:w-[98vw] rounded-lg object-cover text-transparent"
           alt="Incorporation.lk - We provide complete solutions for your business"
         />
-      </div>
+      </div> */}
       <div className="container/fluid flex flex-col items-center justify-center">
         {/* Vison, Growth, Impact */}
         <div className="relative flex justify-center lg:justify-start mt-5 cursor-default">
@@ -82,8 +82,8 @@ function Hero() {
           </Badge>
         </div>
         {/* Hero Main Title */}
-        <div className="flex flex-col text-center mt-5 items-center transition-all duration-200 cursor-default">
-          <p className="text-2xl md:text-3xl lg:text-5xl font-semibold text-center ">
+        <div className="flex flex-col text-center mt-6 items-center transition-all duration-200 cursor-default">
+          <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center px-6 leading-tight lg:leading-snug max-w-4xl">
             Empowering Your Business,
             <br className="hidden lg:block" /> Every Step of the Way
           </p>
@@ -100,7 +100,7 @@ function Hero() {
         </div>
 
         {/* Buttons */}
-        <div className="flex justify-center gap-x-2 mt-5 ">
+        <div className="flex justify-center gap-x-2 mt-6 ">
           <Button
             variant={"default"}
             className={"rounded-full min-w-[120px]"}
@@ -126,7 +126,7 @@ function Hero() {
         </div>
 
         {/* Banner Image/Video */}
-        <div className="relative flex w-[85%] aspect-[16/8] mt-5 items-center justify-center overflow-hidden rounded-lg">
+        <div className="hidden relative md:flex w-[85%] aspect-[16/8] mt-6 items-center justify-center overflow-hidden rounded-lg">
           {heroImages.map((img, i) => (
             <img
               key={i}

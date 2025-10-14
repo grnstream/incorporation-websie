@@ -12,7 +12,7 @@ function PolicyCard({ title, children, icon, className = "" }) {
               </div>
             )}
             <div className={icon ? "flex-1" : ""}>
-              <h2 className="text-xl font-semibold text-gray-900">{title}</h2>
+              <h2 className="text-lg md:text-xl font-semibold text-gray-900">{title}</h2>
             </div>
           </div>
         )}

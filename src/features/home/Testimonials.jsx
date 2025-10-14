@@ -1,6 +1,35 @@
-import testimonialData from "@/public/data/testimonials.json";
 import TestimonialCard from "@/src/components/custom/TestimonialCard";
 import { Marquee } from "@/src/components/magicui/marquee";
+import cpBandara from "@/src/assets/images/chathura-yapa-bandara.jpg";
+import devinda from "@/src/assets/images/devinda-matharage.jpg";
+import gihan from "@/src/assets/images/gihan-nadeera-de-silva.jpg";
+
+const testimonialData = [
+  {
+    name: "Chathura Yapa Bandara",
+    designation: "CEO, Aptinex (PVT) Limited.",
+    quote:
+      "I highly recommend KRC for corporate secretarial services to any entrepreneur starting in Sri Lanka. I also wish KRC the best with their new digital platform, incorporation.lk",
+    image: cpBandara,
+    rating: "5.0",
+  },
+  {
+    name: "Devinda Matharage",
+    designation: "Director, Lankatronics",
+    quote:
+      "I wholeheartedly recommend KRC Corporate Services to any business seeking top-notch secretarial and accountancy services. Their dedication to client satisfaction and the breadth of their knowledge make them a valuable asset to any organization.",
+    image: devinda,
+    rating: "5.0",
+  },
+  {
+    name: "Gihan Nadeera De Silva",
+    designation: "Director, Ceylon Milky Way Pvt Ltd",
+    quote:
+      "KRC’s support has been invaluable for us. Their team goes above and beyond, providing the guidance and resources we need to stay compliant and succeed. Their commitment to client satisfaction is unmatched.",
+    image: gihan,
+    rating: "4.5",
+  },
+];
 
 function Testimonials() {
   return (
@@ -10,8 +39,9 @@ function Testimonials() {
       className="relative overflow-hidden mt-25"
     >
       <div className="flex flex-col text-center mt-5 items-center transition-all duration-200">
-        <p className="text-2xl md:text-3xl lg:text-5xl font-semibold text-center">
-         Success Stories<br/> That Inspire Our Journey
+        <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center">
+          Success Stories
+          <br /> That Inspire Our Journey
         </p>
         {/* Sub description */}
         <div className="flex max-w-[75%]">
@@ -24,26 +54,28 @@ function Testimonials() {
         </div>
       </div>
       <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden">
-        <Marquee pauseOnHover vertical  className="[--duration:39s]">
+        <Marquee pauseOnHover vertical className="[--duration:39s]">
           {testimonialData.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
           ))}
         </Marquee>
-
-        <Marquee pauseOnHover vertical  className="[--duration:41s]">
+        <Marquee pauseOnHover vertical className="[--duration:41s] hidden md:flex">
           {testimonialData.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
           ))}
         </Marquee>
-
-        <Marquee pauseOnHover vertical  className="[--duration:40s] hidden lg:flex">
+        <Marquee
+          pauseOnHover
+          vertical
+          className="[--duration:40s] hidden lg:flex"
+        >
           {testimonialData.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
           ))}
         </Marquee>
-
-       <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background"></div> </div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background"></div>{" "}
+      </div>
     </section>
   );
 }

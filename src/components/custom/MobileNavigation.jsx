@@ -19,11 +19,12 @@ const navItems = [
   { icon: BriefcaseBusiness, label: "All Services", to: "/services" },
   { icon: Contact, label: "Contact", to: "/contact" },
   { icon: Info, label: "Privacy Policy", to: "/privacy-policy" },
+  { icon: Info, label: "Terms & Conditions", to: "/terms-and-conditions" },
+  { icon: Info, label: "Refund Policy", to: "/refund-policy" },
 ];
 
 function MobileNavigation({ setIsOpen, toggleNav }) {
   const year = new Date().getFullYear();
-  const navigate = useNavigate();
 
   return (
     <>
@@ -68,10 +69,9 @@ function MobileNavigation({ setIsOpen, toggleNav }) {
           className={
             "border-primary-900 text-white my-6 rounded-full transition-colors duration-200"
           }
-          onClick={() => {
-            navigate("/auth/sign-in");
-            setIsOpen(false);
-          }}
+          onClick={() =>
+            window.open("https://platform.incorporation.lk/", "_blank")
+          }
         >
           Go To Online Platform
         </Button>

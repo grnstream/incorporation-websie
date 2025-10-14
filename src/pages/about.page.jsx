@@ -55,14 +55,7 @@ export default function AboutUsPage() {
 
             {/* Right Side - Image Container */}
             <div className="relative lg:h-full">
-              {/* Mobile Image */}
-              <div className="lg:hidden mb-8">
-                <img
-                  src={aboutImage}
-                  alt="about-page-image"
-                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
-                />
-              </div>
+        
 
               {/* Desktop Image */}
               <div className="hidden lg:block relative">

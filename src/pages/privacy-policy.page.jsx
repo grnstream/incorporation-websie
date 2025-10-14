@@ -17,7 +17,7 @@ function PrivacyPolicyPage() {
 
           {/* Introduction */}
           <PolicyCard title="Introduction">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               At incorporation.lk, we are committed to protecting the privacy
               and security of our clients’ personal information. This Privacy
               Policy outlines how we collect, use, and safeguard your
@@ -30,7 +30,7 @@ function PrivacyPolicyPage() {
           {/* Information We Collect */}
           <PolicyCard title="Information We Collect">
             <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-sm md:text-md text-gray-700 leading-relaxed">
                 When you visit our website, we may collect certain information
                 about you, including:
               </p>
@@ -48,7 +48,7 @@ function PrivacyPolicyPage() {
           {/* Use of Information */}
           <PolicyCard title="Use of Information">
             <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-sm md:text-md text-gray-700 leading-relaxed">
                 We may use the collected information for the following purposes:
               </p>
               <BulletList
@@ -66,7 +66,7 @@ function PrivacyPolicyPage() {
           {/*Information Sharing*/}
           <PolicyCard title="Information Sharing">
             <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-sm md:text-md text-gray-700 leading-relaxed">
                 We respect your privacy and do not sell, trade, or otherwise
                 transfer your personal information to third parties without your
                 consent, except in the following circumstances:
@@ -82,7 +82,7 @@ function PrivacyPolicyPage() {
 
           {/* Data Security */}
           <PolicyCard title="Data Security">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               We implement industry-standard security measures to protect your
               personal information from unauthorized access, alteration,
               disclosure, or destruction. However, please be aware that no
@@ -93,7 +93,7 @@ function PrivacyPolicyPage() {
 
           {/* Cookies and Tracking Technologies */}
           <PolicyCard title="Cookies and Tracking Technologies">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               We use cookies and similar technologies to enhance your browsing
               experience, analyze website traffic, and gather information about
               your preferences and interactions with our website. You have the
@@ -104,7 +104,7 @@ function PrivacyPolicyPage() {
 
           {/* Changes to the Privacy Policy */}
           <PolicyCard title="Changes to the Privacy Policy">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               We reserve the right to update or modify this Privacy Policy at
               any time. Any changes will be posted on this page with a revised
               “last updated” date. We encourage you to review this Privacy
@@ -115,7 +115,7 @@ function PrivacyPolicyPage() {
 
           {/* Contact Us */}
           <PolicyCard title="Contact Us">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               If you have any questions, concerns, or requests regarding our
               Privacy Policy or the handling of your personal information,
               please contact us using the information provided on our website.

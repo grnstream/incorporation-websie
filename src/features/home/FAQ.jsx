@@ -6,8 +6,29 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/src/components/ui/accordion";
-import faqData from "@/public/data/faq.json";
 
+const faqData = [
+   {
+    "question": "What types of companies can you register?",
+    "answer": "We can register Limited Liability Companies, Companies Limited by Guarantee, and more."
+  },
+  {
+    "question": "How long does the registration process take?",
+    "answer": "The duration varies depending on the type of registration and compliance requirements."
+  },
+  {
+    "question": "Do you provide ongoing support after registration?",
+    "answer": "Yes, we offer continuous support and consultation services."
+  },
+  {
+    "question": "What documents are required for registration?",
+    "answer": "Specific documents vary based on the type of registration. We will guide you through the document preparation process."
+  },
+  {
+    "question": "Can you assist with tax-related services?",
+    "answer": "Absolutely, we offer Income Tax consultation and handling of Income Tax issues."
+  }
+];
 function FAQ() {
   const navigate = useNavigate();
 
@@ -16,7 +37,7 @@ function FAQ() {
       <div className="grid gap-5 lg:grid-cols-2 lg:gap-9 transition duration-500">
         {/* Left side - Title and description */}
         <div className="flex flex-col text-center items-center lg:items-start lg:text-left">
-          <h2 className="text-5xl lg:text-5xl font-semibold">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold">
             Frequently<br/> Asked Questions
           </h2>
 

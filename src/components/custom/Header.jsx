@@ -41,22 +41,19 @@ function Header({ toggleNav, isAtTop }) {
           isAtTop ? "min-w-[180px]" : "min-w-[100px]"
         }`}
       >
-        <a
-          href="https://platform.incorporation.lk/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div>
-            <Button
-              size={"lg"}
-              className={
-                "hidden rounded-full text-white lg:block hover:bg-gradient-to-t"
-              }
-            >
-              Go To Online Platform
-            </Button>
-          </div>
-        </a>
+        <div>
+          <Button
+            size={"lg"}
+            className={
+              "hidden rounded-full text-white lg:block hover:bg-gradient-to-t"
+            }
+            onClick={() =>
+              window.open("https://platform.incorporation.lk/", "_blank")
+            }
+          >
+            Go To Online Platform
+          </Button>
+        </div>
 
         <div className="flex items-center gap-1 sm:gap-3.5 lg:hidden">
           <Button

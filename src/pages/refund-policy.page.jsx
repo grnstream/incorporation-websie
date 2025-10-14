@@ -17,7 +17,7 @@ function RefundPolicyPage() {
 
           {/* Introduction */}
           <PolicyCard title="Introduction">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               Thank you for subscribing to the service at incorporation.lk. We
               value your satisfaction and strive to provide you with the best
               online service possible. If, for any reason, you are not
@@ -28,12 +28,12 @@ function RefundPolicyPage() {
           {/* Refunds */}
           <PolicyCard title="Refunds">
             <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-sm md:text-md text-gray-700 leading-relaxed">
                 We accept refund requests within 7 days of the date of payment.
                 You may directly e-mail your refund request by mentioning the
                 reason for the refund to contact@incorporation.lk.
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className=" text-sm md:text-md text-gray-700 leading-relaxed">
                 Once we receive your refund request e-mail, we will notify you
                 of the status of your refund. If your request is approved, we
                 will initiate a refund to your original method of payment
@@ -62,7 +62,7 @@ function RefundPolicyPage() {
               </svg>
             }
           >
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               We do not entertain requests for transferring subscriptions from
               one company to another company.
             </p>
@@ -70,14 +70,14 @@ function RefundPolicyPage() {
 
           {/* Important Notice */}
           <AlertBanner variant="info">
-            <p className="font-medium">
+            <p className="font-medium ">
               All refund requests must be submitted within 7 days of payment.
             </p>
           </AlertBanner>
 
           {/* Non-Returnable Items */}
           <PolicyCard title="Non-Returnable Items">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               In the event of your platform incorporation.lk user account being
               suspended due to any of the Terms and Condition (Policy)
               violations, any remaining subscription fee will not be refunded.
@@ -88,7 +88,7 @@ function RefundPolicyPage() {
 
           {/* Processing Time */}
           <PolicyCard title="Processing Time">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               Refund requests will be processed within 10 business days after we
               receive your e-mail. Please note that it may take additional time
               for the refund to appear in your account, depending on your
@@ -98,7 +98,7 @@ function RefundPolicyPage() {
 
           {/* Amendments and Termination */}
           <PolicyCard title="Amendments and Termination">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               We reserve the right to modify, update, or terminate the Refund
               Policy at any time without prior notice. Any changes will be
               posted on this page with a revised "last updated" date. It is your
@@ -109,7 +109,7 @@ function RefundPolicyPage() {
 
           {/* Contact Us */}
           <PolicyCard title="Contact Us">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               If you have any questions or concerns regarding our Refund Policy,
               please contact us over: contact@incorporation.lk email. We are
               here to assist you and ensure your interaction with us is

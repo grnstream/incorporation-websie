@@ -10,15 +10,15 @@ function TermsAndConditionsPage() {
         <div className=" rounded-lg">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               Terms & Conditions
             </h1>
-            <p className="text-gray-500">Last updated: February 12, 2024</p>
+            <p className="text-sm md:text-md text-gray-500">Last updated: February 12, 2024</p>
           </div>
 
           {/* Introduction */}
           <PolicyCard title="Introduction">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               Welcome to Incorporation.lk. These Terms and Conditions govern
               your use of our website and the subscription of services through
               our platform. By accessing or using our website, you agree to
@@ -116,7 +116,7 @@ function TermsAndConditionsPage() {
 
           {/* Limitation of Liability */}
           <PolicyCard title="Limitation of Liability">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               In no event shall incorporation.lk, its directors, employees, or
               affiliates be liable for any direct, indirect, incidental,
               special, or consequential damages arising out of or in connection
@@ -125,7 +125,7 @@ function TermsAndConditionsPage() {
           </PolicyCard>
           {/* Amendments and Termination */}
           <PolicyCard title="Amendments and Termination">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               We reserve the right to modify, update, or terminate these Terms
               and Conditions at any time without prior notice. It is your
               responsibility to review these terms periodically for any changes.
@@ -133,7 +133,7 @@ function TermsAndConditionsPage() {
           </PolicyCard>
           {/* Contact Us */}
           <PolicyCard title="Contact Us">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               If you have any questions or concerns regarding our Terms &
               Conditions, please contact us over contact@incorporation.lk email.
               We are here to assist you and ensure your interaction with us is
