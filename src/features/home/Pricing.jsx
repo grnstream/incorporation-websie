@@ -1,10 +1,12 @@
 import { Button } from "@/src/components/ui/button";
 import { Check } from "lucide-react";
-import { motion } from "framer-motion";
+// eslint-disable-next-line no-unused-vars
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 function Pricing() {
   const [hoveredPlan, setHoveredPlan] = useState(null);
+  const [clickedPlan, setClickedPlan] = useState(null);
 
   const plans = [
     {
@@ -196,6 +198,9 @@ function Pricing() {
     </p>
   );
 
+  const handleCardClick = (planName) => {
+    setClickedPlan(clickedPlan === planName ? null : planName);
+  };
 
   return (
     <section
@@ -229,102 +234,129 @@ function Pricing() {
               {/* Pricing Cards */}
               <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
                 {plans.map((plan, index) => (
-                  <div
-                    key={index}
-                    className="group relative transition-all duration-300 hover:scale-105"
-                    onMouseEnter={() => setHoveredPlan(plan.name)}
-                    onMouseLeave={() => setHoveredPlan(null)}
-                  >
-                    {/* Main Card */}
+                  <div key={index} className="flex flex-col items-stretch">
                     <div
-                      className={`rounded-2xl p-8 relative z-0 h-full flex flex-col  ${
-                        isPlanActive(plan)
-                          ? "bg-gradient-to-b from-primary-400 to-primary-500 text-white shadow-2xl"
-                          : "bg-white text-gray-900 shadow-lg"
-                      } transition-all duration-500 hover:shadow-xl`}
+                      className="group relative transition-all duration-300 hover:scale-105 cursor-pointer h-full"
+                      onMouseEnter={() => setHoveredPlan(plan.name)}
+                      onMouseLeave={() => setHoveredPlan(null)}
+                      onClick={() => handleCardClick(plan.name)}
                     >
-                      {/* Plan Header */}
-                      <div className="mb-6">
-                        <h3 className="text-xl font-bold mb-3">{plan.name}</h3>
-                        <div className="h-12 lg:h-20 overflow-hidden">
-                          <p
-                            className={`text-xs sm:text-sm mb-4 text-start ${
-                              isPlanActive(plan)
-                                ? "text-blue-100"
-                                : "text-gray-600"
-                            }`}
-                          >
-                            {plan.description}
-                          </p>
-                        </div>
-                        <div className="mb-2">
-                          <span className="text-3xl font-bold">
-                            {plan.price}
-                          </span>
-                          <span
-                            className={`text-sm ml-1 ${
-                              isPlanActive(plan)
-                                ? "text-blue-200"
-                                : "text-gray-500"
-                            }`}
-                          >
-                            / T&C apply
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* CTA Button */}
-                      <Button
-                        size={"lg"}
-                        onClick={() =>
-                          window.open(
-                            "https://platform.incorporation.lk/",
-                            "_blank"
-                          )
-                        }
-                        className={`w-full py-6 px-6 rounded-full font-medium mb-8 transition-all duration-300 ${
+                      {/* Main Card */}
+                      <div
+                        className={`rounded-2xl p-8 relative z-0 h-full flex flex-col  ${
                           isPlanActive(plan)
-                            ? "bg-white text-blue-500 hover:bg-gray-100"
-                            : "bg-gradient-to-b from-primary-400 to-primary-500 text-white hover:bg-gradient-to-t"
-                        }`}
+                            ? "bg-gradient-to-b from-primary-400 to-primary-500 text-white shadow-2xl"
+                            : "bg-white text-gray-900 shadow-lg"
+                        } transition-all duration-500 hover:shadow-xl`}
                       >
-                        {plan.buttonText}
-                      </Button>
-
-                      {/* Features List */}
-                      <div className="space-y-4 flex-grow">
-                        {plan.features.map((feature, featureIndex) => (
-                          <div
-                            key={featureIndex}
-                            className="flex items-start gap-3"
-                          >
-                            <div
-                              className={`rounded-full p-1 mt-0.5 flex-shrink-0 ${
-                                isPlanActive(plan) ? "bg-white" : "bg-blue-500"
-                              }`}
-                            >
-                              <Check
-                                size={12}
-                                className={
-                                  isPlanActive(plan)
-                                    ? "text-blue-500"
-                                    : "text-white"
-                                }
-                              />
-                            </div>
-                            <span
-                              className={`text-sm leading-relaxed ${
+                        {/* Plan Header */}
+                        <div className="mb-6">
+                          <h3 className="text-xl font-bold mb-3">
+                            {plan.name}
+                          </h3>
+                          <div className="h-12 lg:h-20 overflow-hidden">
+                            <p
+                              className={`text-xs sm:text-sm mb-4 text-start ${
                                 isPlanActive(plan)
-                                  ? "text-white"
-                                  : "text-gray-700"
+                                  ? "text-blue-100"
+                                  : "text-gray-600"
                               }`}
                             >
-                              {feature}
+                              {plan.description}
+                            </p>
+                          </div>
+                          <div className="mb-2">
+                            <span className="text-3xl font-bold">
+                              {plan.price}
+                            </span>
+                            <span
+                              className={`text-sm ml-1 ${
+                                isPlanActive(plan)
+                                  ? "text-blue-200"
+                                  : "text-gray-500"
+                              }`}
+                            >
+                              / T&C apply
                             </span>
                           </div>
-                        ))}
+                        </div>
+
+                        {/* CTA Button */}
+                        <Button
+                          size={"lg"}
+                          onClick={() =>
+                            window.open(
+                              "https://platform.incorporation.lk/",
+                              "_blank"
+                            )
+                          }
+                          className={`w-full py-6 px-6 rounded-full font-medium mb-8 transition-all duration-300 ${
+                            isPlanActive(plan)
+                              ? "bg-white text-blue-500 hover:bg-gray-100"
+                              : "bg-gradient-to-b from-primary-400 to-primary-500 text-white hover:bg-gradient-to-t"
+                          }`}
+                        >
+                          {plan.buttonText}
+                        </Button>
+
+                        {/* Features List */}
+                        <div className="space-y-4 flex-grow">
+                          {plan.features.map((feature, featureIndex) => (
+                            <div
+                              key={featureIndex}
+                              className="flex items-start gap-3"
+                            >
+                              <div
+                                className={`rounded-full p-1 mt-0.5 flex-shrink-0 ${
+                                  isPlanActive(plan)
+                                    ? "bg-white"
+                                    : "bg-blue-500"
+                                }`}
+                              >
+                                <Check
+                                  size={12}
+                                  className={
+                                    isPlanActive(plan)
+                                      ? "text-blue-500"
+                                      : "text-white"
+                                  }
+                                />
+                              </div>
+                              <span
+                                className={`text-sm leading-relaxed ${
+                                  isPlanActive(plan)
+                                    ? "text-white"
+                                    : "text-gray-700"
+                                }`}
+                              >
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
+                    <AnimatePresence>
+                      {clickedPlan === plan.name && index < plans.length - 1 &&  (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: "easeOut" }}
+                          className="lg:hidden  mt-4"
+                        >
+                          <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-2xl shadow-xl">
+                            <div className="flex flex-col justify-center text-center text-sm leading-relaxed">
+                              {
+                                additionalContent.find(
+                                  (c) => c.name === plan.name
+                                )?.additional
+                              }
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 ))}
               </div>
@@ -351,7 +383,7 @@ function Pricing() {
               }}
               className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 py-12 rounded-2xl shadow-xl w-full max-w-6xl mx-auto"
             >
-              <div className="flex flex-col justify-center h-42 text-center text-md leading-relaxed">
+              <div className="flex flex-col h-65 md:h-40  justify-center  text-center text-md leading-relaxed">
                 {activeContent}
               </div>
             </motion.div>

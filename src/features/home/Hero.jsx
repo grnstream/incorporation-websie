@@ -59,13 +59,26 @@ function Hero() {
       className="relative overflow-hidden mt-10"
     >
       {/* Background Image */}
-      {/* <div className="fixed inset-0 -z-10 flex items-center justify-center p-4">
-        <img
-          src="/Pattern.png"
-          className="h-[92%] lg:w-[91vw] xl:w-[98vw] rounded-lg object-cover text-transparent"
-          alt="Incorporation.lk - We provide complete solutions for your business"
-        />
-      </div> */}
+      <div className="fixed inset-0 -z-10 flex items-center justify-center p-4">
+        <div className="relative h-[92%] lg:w-[91vw] xl:w-[98vw] rounded-lg overflow-hidden">
+          {/* Background image */}
+          <img
+            src="/Pattern.png"
+            className="w-full h-full object-cover rounded-lg"
+            alt="Incorporation.lk - We provide complete solutions for your business"
+          />
+
+          {/* Radial gradient overlay */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle at center, rgba(255,255,255,1) 0%,  rgba(0,0,0,0.0) 100%)",
+              mixBlendMode: "normal",
+            }}
+          />
+        </div>
+      </div>
       <div className="container/fluid flex flex-col items-center justify-center">
         {/* Vison, Growth, Impact */}
         <div className="relative flex justify-center lg:justify-start mt-5 cursor-default">
@@ -105,7 +118,7 @@ function Hero() {
             variant={"default"}
             className={"rounded-full min-w-[120px]"}
             size={"lg"}
-            onClick={()=>navigate('/incobot')}
+            onClick={() => navigate("/incobot")}
           >
             <SparklesText sparklesCount={3} className={"text-primary-50"}>
               IncoBot
