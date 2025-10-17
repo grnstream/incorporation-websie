@@ -3,7 +3,7 @@ import { Button } from "../../components/ui/button";
 
 function BusinessBanner() {
   return (
-    <div className="relative w-[80vw] overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 px-8 py-12 md:px-12 md:py-20 lg:px-16 lg:py-24 mb-10 justify-self-center">
+    <div className="relative w-[80vw] overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 px-8 py-12 md:px-12 md:py-20 lg:px-16 lg:py-24 mb-10 mx-auto">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden ">
         <img

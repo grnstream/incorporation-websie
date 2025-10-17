@@ -32,8 +32,8 @@ const contacts = [
     title: "Call Us",
     logo: phone,
     description: "Mon-Fri, 8am to 5pm",
-    btntext: "+94 112 51 57 56",
-    onClick: () => window.location.href = "tel:+94112515756"
+    btntext: "+94 72 289 9111",
+    onClick: () => window.location.href = "tel:+94722899111"
   },
 ];
 
