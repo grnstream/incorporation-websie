@@ -5,6 +5,12 @@ import { Plane } from "lucide-react";
 import gsLogo from "@/src/assets/logos/gs-logo.png";
 import mensugLogo from "@/src/assets/logos/mensug-logo.png";
 import cameralkLogo from "@/src/assets/logos/cameralk-logo.png";
+import gsmbTechnicalLogo from "@/src/assets/logos/gsmb-technical.png";
+import heritageHotel from "@/src/assets/logos/heritage-hotel.png";
+import newUniverse from "@/src/assets/logos/new-universe.png";
+import slVlog from "@/src/assets/logos/sl-vlog.png";
+import thriposha from "@/src/assets/logos/thriposha.png";
+import trendySolutions from "@/src/assets/logos/trendy-solutions.png";
 import herobanner1 from "@/src/assets/images/hero-banner1.png";
 import herobanner2 from "@/src/assets/images/hero-banner2.png";
 import herobanner3 from "@/src/assets/images/hero-banner3.png";
@@ -26,6 +32,30 @@ const customers = [
   {
     customer: "Mensug",
     logo: mensugLogo,
+  },
+  {
+    customer: "SL Vlog",
+    logo: slVlog,
+  },
+  {
+    customer: "Thriposha",
+    logo: thriposha,
+  },
+  {
+    customer: "Heritage Hotel",
+    logo: heritageHotel,
+  },
+  {
+    customer: "New Universe",
+    logo: newUniverse,
+  },
+  {
+    customer: "Trendy Solutions",
+    logo: trendySolutions,
+  },
+  {
+    customer: "GSMB Technical",
+    logo: gsmbTechnicalLogo,
   },
 ];
 
@@ -139,7 +169,7 @@ function Hero() {
         </div>
 
         {/* Banner Image/Video */}
-        <div className="hidden relative md:flex w-[85%] aspect-[16/8] mt-6 items-center justify-center overflow-hidden rounded-lg">
+        <div className="hidden relative md:flex w-[85%] aspect-[16/8] mt-6 items-center justify-center overflow-hidden rounded-lg shadow-lg ">
           {heroImages.map((img, i) => (
             <img
               key={i}
@@ -153,14 +183,14 @@ function Hero() {
         </div>
         {/* Customers */}
         <div className="flex flex-col bg-white mt-10 rounded-4xl items-center justify-center text-neutral-900">
-          <p>Trusted by Over 1,000 Clients Islandwide</p>
-          <div className="flex flex-wrap items-center justify-center gap-6 my-5">
+          <p className="py-5">Trusted by Over 1,000 Clients Islandwide</p>
+          <div className="flex flex-wrap items-center justify-center gap-8 my-5">
             {customers.map((c, index) => (
               <img
                 key={index}
                 src={c.logo}
                 alt={c.customer}
-                className="h-12 w-auto object-contain hover:grayscale-0 transition"
+                className="h-8 w-auto object-contain hover:grayscale-0 transition"
               />
             ))}
           </div>

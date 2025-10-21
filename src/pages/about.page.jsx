@@ -59,11 +59,11 @@ export default function AboutUsPage() {
 
               {/* Desktop Image */}
               <div className="hidden lg:block relative">
-                <div className="absolute top-22 xl:right-[-90px] flex items-center justify-center rounded-2xl">
+                <div className="absolute top-20 xl:right-[-90px] flex items-center justify-center rounded-2xl">
                   <img
                     src={aboutImage}
                     alt="about-page-image"
-                    className=" w-full h-[900px] object-cover relative z-20 rounded-2xl"
+                    className=" w-full h-full object-cover relative z-20 rounded-2xl"
                   />
                 </div>
               </div>
@@ -71,7 +71,7 @@ export default function AboutUsPage() {
           </div>
 
           {/* Large Blue Background - positioned absolutely to extend beyond container */}
-          <div className="hidden lg:block absolute top-[60px] right-[-150px] xl:right-[-200px] w-[55%] xl:w-[50%] h-[1000px] bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl"></div>
+          <div className="hidden lg:block absolute top-[2vh] right-[-10vw] w-[50%] h-[100vh] bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl"></div>
         </div>
       </section>
 

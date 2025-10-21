@@ -23,6 +23,7 @@ function Pricing() {
         "Incorporation certificate (printed copy)",
         "Online client portal access",
         "Company secretary for registration purpose - no upfront charges",
+        "Any additional services required during registration will be charged separately",
       ],
     },
     {
@@ -33,6 +34,7 @@ function Pricing() {
       buttonText: "Get Started Now",
       isHighlighted: true,
       features: [
+        "1st Year of Corporate Secretarial Services FREE!",
         "Includes everything in Starter",
         "One Pre-ink director seal",
         "Resolution for corporate bank account opening",
@@ -67,7 +69,7 @@ function Pricing() {
   ];
 
   const isPlanActive = (plan) => {
-    if (hoveredPlan) return hoveredPlan === plan.name; // if hovering → show hovered
+    if (hoveredPlan) return hoveredPlan === plan.name; 
     return plan.isHighlighted; // otherwise fallback to recommended
   };
 
@@ -188,7 +190,7 @@ function Pricing() {
     },
   ];
 
-  const activeContent = additionalContent.find((c) => c.name === hoveredPlan)
+  const activeContent = additionalContent.find((c) => c.name === (hoveredPlan || clickedPlan))
     ?.additional ?? (
     <p>
       In addition to the above services, our clients also receive reliable IT
@@ -343,9 +345,11 @@ function Pricing() {
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3, ease: "easeOut" }}
-                          className="lg:hidden  mt-4"
+                          className="lg:hidden mt-4"
                         >
-                          <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-2xl shadow-xl">
+                          <div className="flex flex-col bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-2xl shadow-xl">
+
+                            <div className="mx-auto w-full items-center justify-center flex">Additional Services</div>
                             <div className="flex flex-col justify-center text-center text-sm leading-relaxed">
                               {
                                 additionalContent.find(
@@ -383,7 +387,8 @@ function Pricing() {
               }}
               className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 py-12 rounded-2xl shadow-xl w-full max-w-6xl mx-auto"
             >
-              <div className="flex flex-col h-65 md:h-40  justify-center  text-center text-md leading-relaxed">
+              <div className="mx-auto w-full items-center justify-center flex mb-3">Additional Services</div>
+              <div className="flex flex-col justify-center text-center text-sm leading-relaxed h-auto">
                 {activeContent}
               </div>
             </motion.div>

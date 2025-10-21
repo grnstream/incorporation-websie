@@ -3,6 +3,8 @@ import { Marquee } from "@/src/components/magicui/marquee";
 import cpBandara from "@/src/assets/images/chathura-yapa-bandara.jpg";
 import devinda from "@/src/assets/images/devinda-matharage.jpg";
 import gihan from "@/src/assets/images/gihan-nadeera-de-silva.jpg";
+import serendibFragrance from "@/src/assets/images/serendib-fragrance.jpg";
+import offrampcolombo from "@/src/assets/images/off-ramp-colombo.jpg";
 
 const testimonialData = [
   {
@@ -27,6 +29,22 @@ const testimonialData = [
     quote:
       "KRC’s support has been invaluable for us. Their team goes above and beyond, providing the guidance and resources we need to stay compliant and succeed. Their commitment to client satisfaction is unmatched.",
     image: gihan,
+    rating: "4.5",
+  },
+  {
+    name: "Serendib Fragrance",
+    designation: "",
+    quote:
+      "Our business company registration was handled very quickly and with great efficiency. The entire process was smooth, professional, and hassle-free. The team guided us step by step, making sure all our documents and requirements were completed on time without any delays.Their service is highly reliable, transparent, and customer-friendly. We are truly impressed with their professionalism and commitment to delivering results. We would highly recommend Incorporation.lk to anyone looking for fast and trustworthy company registration services in Sri Lanka.",
+    image: serendibFragrance,
+    rating: "4.5",
+  },
+  {
+    name: "Off Ramp Colombo",
+    designation: "",
+    quote:
+      "Truly impressed with the quality of service! Your professionalism, attention to detail, and dedication made all the difference. Thank you for going above and beyond. Much appreciated!. congratulations incorporation.lk",
+    image: offrampcolombo,
     rating: "4.5",
   },
 ];
