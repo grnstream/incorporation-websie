@@ -12,12 +12,12 @@ function TestimonialCard({ name, designation, quote, image, rating }) {
     >
       <CardContent className={"flex min-h-[210px] flex-col justify-between"}>
         <div>
-          <div className="bg-primary-foreground flex w-fit items-center gap-1.5 rounded-full px-3 py-1.5">
+          {/* <div className="bg-primary-foreground flex w-fit items-center gap-1.5 rounded-full px-3 py-1.5">
             <Star className="fill-background m-0 h-5 w-5 p-0" />
             <p className="text-background text-sm">{rating}</p>
-          </div>
+          </div> */}
 
-          <blockquote className="mt-4 line-clamp-4 text-sm font-light">
+          <blockquote className="mt-4  text-sm font-light">
             {quote}
           </blockquote>
         </div>

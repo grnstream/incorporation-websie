@@ -23,7 +23,7 @@ function Pricing() {
         "Incorporation certificate (printed copy)",
         "Online client portal access",
         "Company secretary for registration purpose - no upfront charges",
-        "Any additional services required during registration will be charged separately",
+        "Any services not listed above will be charged separately.",
       ],
     },
     {
@@ -34,11 +34,11 @@ function Pricing() {
       buttonText: "Get Started Now",
       isHighlighted: true,
       features: [
-        "1st Year of Corporate Secretarial Services FREE!",
         "Includes everything in Starter",
         "One Pre-ink director seal",
         "Resolution for corporate bank account opening",
         "TIN registration",
+        "1st Year of Corporate Secretarial Services FREE!",
         "Free Accounting & Bookkeeping consultation - Free for 1st year",
         "Free Tax consultation - Free for 1st year",
         "VAT and SSCL related consultations - Free for 1st year",

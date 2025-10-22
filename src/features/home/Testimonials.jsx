@@ -35,7 +35,7 @@ const testimonialData = [
     name: "Serendib Fragrance",
     designation: "",
     quote:
-      "Our business company registration was handled very quickly and with great efficiency. The entire process was smooth, professional, and hassle-free. The team guided us step by step, making sure all our documents and requirements were completed on time without any delays.Their service is highly reliable, transparent, and customer-friendly. We are truly impressed with their professionalism and commitment to delivering results. We would highly recommend Incorporation.lk to anyone looking for fast and trustworthy company registration services in Sri Lanka.",
+      "Our company registration was handled very quickly and with great efficiency. The entire process was smooth, professional, and hassle-free. The team guided us step by step, making sure all our documents and requirements were completed on time without any delays.Their service is highly reliable, transparent, and customer-friendly. We are truly impressed with their professionalism and commitment to delivering results. We would highly recommend Incorporation.lk to anyone looking for fast and trustworthy company registration services in Sri Lanka.",
     image: serendibFragrance,
     rating: "4.5",
   },
@@ -71,7 +71,7 @@ function Testimonials() {
           </p>
         </div>
       </div>
-      <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden">
+      <div className="relative flex h-[640px] w-full flex-row items-center justify-center overflow-hidden">
         <Marquee pauseOnHover vertical className="[--duration:39s]">
           {testimonialData.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />

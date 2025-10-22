@@ -19,6 +19,7 @@ import herobanner5 from "@/src/assets/images/hero-banner5.png";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router";
+import { Marquee } from "@/src/components/magicui/marquee";
 
 const customers = [
   {
@@ -73,6 +74,8 @@ function Hero() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const firstRow = customers.slice(0, customers.length / 2);
+  const secondRow = customers.slice(customers.length / 2);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -181,10 +184,26 @@ function Hero() {
             />
           ))}
         </div>
+        
         {/* Customers */}
         <div className="flex flex-col bg-white mt-10 rounded-4xl items-center justify-center text-neutral-900">
           <p className="py-5">Trusted by Over 1,000 Clients Islandwide</p>
-          <div className="flex flex-wrap items-center justify-center gap-8 my-5">
+          <div className="relative flex w-[85%] flex-col items-center justify-center overflow-hidden">
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {firstRow.map((c, index) => (
+              <img
+                key={index}
+                src={c.logo}
+                alt={c.customer}
+                className="h-8 w-auto object-contain hover:grayscale-0 transition mr-10"
+              />
+            ))}
+          </Marquee>
+
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white"></div>
+        </div>
+          {/* <div className="flex flex-wrap items-center justify-center gap-8 my-5">
             {customers.map((c, index) => (
               <img
                 key={index}
@@ -193,7 +212,7 @@ function Hero() {
                 className="h-8 w-auto object-contain hover:grayscale-0 transition"
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
