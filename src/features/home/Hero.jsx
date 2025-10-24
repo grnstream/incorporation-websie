@@ -85,7 +85,6 @@ function Hero() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const firstRow = customers.slice(0, customers.length / 1);
 
 
   useEffect(() => {

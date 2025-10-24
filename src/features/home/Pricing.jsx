@@ -38,7 +38,7 @@ function Pricing() {
         "One Pre-ink director seal",
         "Resolution for corporate bank account opening",
         "TIN registration",
-        "1st Year of Corporate Secretarial Services FREE!",
+        "1st Year Corporate Secretarial Services — FREE!",
         "Free Accounting & Bookkeeping consultation - Free for 1st year",
         "Free Tax consultation - Free for 1st year",
         "VAT and SSCL related consultations - Free for 1st year",
@@ -69,7 +69,7 @@ function Pricing() {
   ];
 
   const isPlanActive = (plan) => {
-    if (hoveredPlan) return hoveredPlan === plan.name; 
+    if (hoveredPlan) return hoveredPlan === plan.name;
     return plan.isHighlighted; // otherwise fallback to recommended
   };
 
@@ -190,8 +190,9 @@ function Pricing() {
     },
   ];
 
-  const activeContent = additionalContent.find((c) => c.name === (hoveredPlan || clickedPlan))
-    ?.additional ?? (
+  const activeContent = additionalContent.find(
+    (c) => c.name === (hoveredPlan || clickedPlan)
+  )?.additional ?? (
     <p>
       In addition to the above services, our clients also receive reliable IT
       support from branding and website development to POS, ERP and custom
@@ -251,10 +252,21 @@ function Pricing() {
                             : "bg-white text-gray-900 shadow-lg"
                         } transition-all duration-500 hover:shadow-xl`}
                       >
+                        {plan.isHighlighted && (
+                          <span className="flex justify-center w-full mb-4">
+                            <span className="inline-block bg-white text-blue-500 text-xs font-semibold px-2 py-2 rounded-full">
+                              Most Popular
+                            </span>
+                          </span>
+                        )}
                         {/* Plan Header */}
                         <div className="mb-6">
                           <h3 className="text-xl font-bold mb-3">
                             {plan.name}
+
+                            {/* <span className="ml-2 inline-block bg-white text-blue-500 text-xs font-semibold px-2 py-1 rounded-full">
+                                Most Popular
+                              </span> */}
                           </h3>
                           <div className="h-12 lg:h-20 overflow-hidden">
                             <p
@@ -339,27 +351,29 @@ function Pricing() {
                       </div>
                     </div>
                     <AnimatePresence>
-                      {clickedPlan === plan.name && index < plans.length - 1 &&  (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "easeOut" }}
-                          className="lg:hidden mt-4"
-                        >
-                          <div className="flex flex-col bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-2xl shadow-xl">
-
-                            <div className="mx-auto w-full items-center justify-center flex">Additional Services</div>
-                            <div className="flex flex-col justify-center text-center text-sm leading-relaxed">
-                              {
-                                additionalContent.find(
-                                  (c) => c.name === plan.name
-                                )?.additional
-                              }
+                      {clickedPlan === plan.name &&
+                        index < plans.length - 1 && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeOut" }}
+                            className="lg:hidden mt-4"
+                          >
+                            <div className="flex flex-col bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-2xl shadow-xl">
+                              <div className="mx-auto w-full items-center justify-center flex">
+                                Additional Services
+                              </div>
+                              <div className="flex flex-col justify-center text-center text-sm leading-relaxed">
+                                {
+                                  additionalContent.find(
+                                    (c) => c.name === plan.name
+                                  )?.additional
+                                }
+                              </div>
                             </div>
-                          </div>
-                        </motion.div>
-                      )}
+                          </motion.div>
+                        )}
                     </AnimatePresence>
                   </div>
                 ))}
@@ -367,7 +381,7 @@ function Pricing() {
             </div>
           </div>
 
-          <div className="flex px-4 pb-4 w-full">
+          <div className="flex px-2 pb-4 w-full justify-center">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -387,8 +401,10 @@ function Pricing() {
               }}
               className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 py-12 rounded-2xl shadow-xl w-full max-w-6xl mx-auto"
             >
-              <div className="mx-auto w-full items-center justify-center flex mb-3">Additional Services</div>
-              <div className="flex flex-col justify-center text-center text-sm leading-relaxed h-auto">
+              <div className="flex  w-full items-center justify-center mb-3">
+                Additional Services
+              </div>
+              <div className="flex flex-col w-full items-center justify-center text-center text-sm leading-relaxed h-[100px] mx-auto">
                 {activeContent}
               </div>
             </motion.div>
