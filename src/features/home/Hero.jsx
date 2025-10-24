@@ -11,6 +11,9 @@ import newUniverse from "@/src/assets/logos/new-universe.png";
 import slVlog from "@/src/assets/logos/sl-vlog.png";
 import thriposha from "@/src/assets/logos/thriposha.png";
 import trendySolutions from "@/src/assets/logos/trendy-solutions.png";
+import serendibFragrance from "@/src/assets/images/serendib-fragrance.jpg";
+import offrampcolombo from "@/src/assets/images/off-ramp-colombo.jpg";
+
 import herobanner1 from "@/src/assets/images/hero-banner1.png";
 import herobanner2 from "@/src/assets/images/hero-banner2.png";
 import herobanner3 from "@/src/assets/images/hero-banner3.png";
@@ -58,6 +61,14 @@ const customers = [
     customer: "GSMB Technical",
     logo: gsmbTechnicalLogo,
   },
+  {
+    customer: "Serendib Fragrance",
+    logo: serendibFragrance,
+  },
+  {
+    customer: "Offramp Colombo",
+    logo: offrampcolombo,
+  },
 ];
 
 const TRANSITION_DURATION = 800;
@@ -74,8 +85,8 @@ function Hero() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const firstRow = customers.slice(0, customers.length / 2);
-  const secondRow = customers.slice(customers.length / 2);
+  const firstRow = customers.slice(0, customers.length / 1);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -188,9 +199,9 @@ function Hero() {
         {/* Customers */}
         <div className="flex flex-col bg-white mt-10 rounded-4xl items-center justify-center text-neutral-900">
           <p className="py-5">Trusted by Over 1,000 Clients Islandwide</p>
-          <div className="relative flex w-[85%] flex-col items-center justify-center overflow-hidden">
-          <Marquee pauseOnHover className="[--duration:20s]">
-            {firstRow.map((c, index) => (
+          <div className="relative flex w-[55%] flex-col items-center justify-center overflow-hidden">
+          <Marquee pauseOnHover className="[--duration:35s]">
+            {customers.map((c, index) => (
               <img
                 key={index}
                 src={c.logo}
