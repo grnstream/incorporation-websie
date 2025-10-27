@@ -66,34 +66,41 @@ export default function IncoBotChat() {
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder("utf-8");
+      let buffer = "";
 
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
 
-        const chunk = decoder.decode(value, { stream: true });
-        const lines = chunk.split("\n");
+        buffer += decoder.decode(value, { stream: true });
 
-        for (const line of lines) {
-          if (line.startsWith("data: ")) {
-            try {
-              const data = JSON.parse(line.slice(6));
-              setMessages((prev) => {
-                const newMessages = [...prev];
-                const lastMsg = newMessages[newMessages.length - 1];
-                newMessages[newMessages.length - 1] = {
-                  ...lastMsg,
-                  text: (lastMsg.text || "") + data.chunk,
-                };
-                return newMessages;
-              });
-            } catch (e) {
-              console.error("Error parsing chunk:", e);
-            }
+        // Split only on *full* new lines
+        const parts = buffer.split(/\r?\n/);
+        buffer = parts.pop(); // Keep the incomplete chunk
+
+        for (const part of parts) {
+          const trimmed = part.trim();
+          if (!trimmed || !trimmed.startsWith("data:")) continue;
+
+          const jsonStr = trimmed.replace(/^data:\s*/, "");
+          try {
+            const parsed = JSON.parse(jsonStr);
+
+            // Append the streamed chunk
+            setMessages((prev) => {
+              const updated = [...prev];
+              const last = updated[updated.length - 1];
+              updated[updated.length - 1] = {
+                ...last,
+                text: (last.text || "") + parsed.chunk,
+              };
+              return updated;
+            });
+          } catch (error) {
+            console.warn("⚠️ Skipping bad JSON chunk:", jsonStr);
           }
         }
       }
-
       setMessages((prev) => {
         const newMessages = [...prev];
         newMessages[newMessages.length - 1].isStreaming = false;
@@ -185,8 +192,8 @@ export default function IncoBotChat() {
   };
 
   return (
-    <div className="min-h-screen   flex items-center justify-center p-8">
-      <div className="max-w-6xl w-full flex gap-8">
+    <div className="min-h-screen flex justify-center p-12 transition-all duration-300 w-6xl">
+      <div className="max-w-6xl w-full flex gap-8 h-full">
         {/* Robot Character */}
         <div className="hidden md:flex flex-shrink-0">
           <img
@@ -198,10 +205,10 @@ export default function IncoBotChat() {
         </div>
 
         {/* Chat Container */}
-        <div className="flex-1 bg-transparent rounded-3xl overflow-hidden flex flex-col max-h-[700px]">
+        <div className="flex-1 flex flex-col max-h-screen ">
           {messages.length === 0 ? (
             /* Welcome Screen */
-            <div className="flex-1 flex flex-col items-center justify-center p-12 text-center">
+            <div className="flex-1 flex flex-col items-center justify-center text-center">
               <div className="flex flex-col lg:flex-row items-center gap-3 mb-6">
                 <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
                   Start talking to
@@ -218,8 +225,8 @@ export default function IncoBotChat() {
                 </div>
               </div>
 
-              <div className="space-y-2 text-gray-600 max-w-2xl justify-items-start">
-                <p className="text-lg">
+              <div className=" text-gray-600 max-w-screen px-6">
+                <p className="text-md">
                   Starting a business in Sri Lanka? Need quick guidance on
                   registration, compliance, or documents? IncoBot is here to
                   support you in every step of the way.
@@ -315,8 +322,8 @@ export default function IncoBotChat() {
           )}
 
           {/* Input Area */}
-          <div className="sticky bottom-0 p-1 ">
-            <div className="flex gap-3 items-center bg-gray-50 rounded-2xl p-4 mt-2 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
+          <div className="bg-white border-t border-gray-200 py-12 max-w-screen">
+            <div className="flex gap-3 items-end bg-gray-50 rounded-xl p-3 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
               <textarea
                 rows={2}
                 type="text"
@@ -331,7 +338,7 @@ export default function IncoBotChat() {
                 disabled={isStreaming}
                 style={{ minHeight: "24px" }}
                 placeholder="Write a question..."
-                className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-400 resize-none"
+                className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-400"
               />
               {isStreaming ? (
                 <button

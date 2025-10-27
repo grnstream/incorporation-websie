@@ -244,6 +244,13 @@ function Pricing() {
                       onMouseLeave={() => setHoveredPlan(null)}
                       onClick={() => handleCardClick(plan.name)}
                     >
+                      {plan.isHighlighted && (
+                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 border-3 border-primary-400 rounded-full">
+                          <span className="inline-block bg-white text-blue-500 text-xs font-semibold px-4 py-2 rounded-full  whitespace-nowrap">
+                            Most Popular
+                          </span>
+                        </div>
+                      )}
                       {/* Main Card */}
                       <div
                         className={`rounded-2xl p-8 relative z-0 h-full flex flex-col  ${
@@ -252,13 +259,7 @@ function Pricing() {
                             : "bg-white text-gray-900 shadow-lg"
                         } transition-all duration-500 hover:shadow-xl`}
                       >
-                        {plan.isHighlighted && (
-                          <span className="flex justify-center w-full mb-4">
-                            <span className="inline-block bg-white text-blue-500 text-xs font-semibold px-2 py-2 rounded-full">
-                              Most Popular
-                            </span>
-                          </span>
-                        )}
+                  
                         {/* Plan Header */}
                         <div className="mb-6">
                           <h3 className="text-xl font-bold mb-3">
@@ -390,12 +391,12 @@ function Pricing() {
               variants={{
                 hidden: {
                   opacity: 0,
-                  y: -110,
+                  y: "-120%",
                   filter: "blur(3px)",
                 },
                 visible: {
                   opacity: 1,
-                  y: -10,
+                  y: "-10%",
                   filter: "blur(0px)",
                 },
               }}

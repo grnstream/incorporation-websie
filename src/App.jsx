@@ -8,7 +8,6 @@ import ServicesPage from "./pages/services.page";
 import PrivacyPolicyPage from "./pages/privacy-policy.page";
 import RefundPolicyPage from "./pages/refund-policy.page";
 import TermsAndConditionsPage from "./pages/terms-and-conditions.page";
-import PricingPage from "./pages/pricing.page";
 import IncoBotPage from "./pages/incobot.page";
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
           <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="refund-policy" element={<RefundPolicyPage />} />
           <Route path="terms-and-conditions" element={<TermsAndConditionsPage />} />
-          <Route path="pricing" element={<PricingPage />} />
           <Route path="incobot" element={<IncoBotPage />} />
         </Route>
       </Routes>
