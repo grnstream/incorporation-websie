@@ -322,8 +322,8 @@ export default function IncoBotChat() {
           )}
 
           {/* Input Area */}
-          <div className="bg-white border-t border-gray-200 py-12 max-w-screen">
-            <div className="flex gap-3 items-end bg-gray-50 rounded-xl p-3 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
+          <div className="flex flex-col items-center w-full bg-white border-t border-gray-200 py-12">
+            <div className="flex gap-3 w-full items-end bg-gray-50 rounded-xl p-3 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
               <textarea
                 rows={2}
                 type="text"
@@ -357,6 +357,11 @@ export default function IncoBotChat() {
                   <ArrowUp className="w-5 h-5" />
                 </button>
               )}
+            </div>
+            <div className="mt-2 text-center w-full max-w-3xl">
+              <p className="text-neutral-500 text-xs">
+                Information provided is not legal advice.
+              </p>
             </div>
           </div>
         </div>
