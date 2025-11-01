@@ -236,7 +236,7 @@ export default function IncoBotChat() {
           ) : (
             /* Chat Messages */
             <div
-              className="flex-1 overflow-y-auto p-6 space-y-6 "
+              className="flex-1 overflow-y-auto p-4 md:p-6 space-y-6"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               ref={messagesEndRef}
             >
@@ -322,8 +322,8 @@ export default function IncoBotChat() {
           )}
 
           {/* Input Area */}
-          <div className="flex flex-col items-center w-full bg-white border-t border-gray-200 py-12">
-            <div className="flex gap-3 w-full items-end bg-gray-50 rounded-xl p-3 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
+          <div className="flex flex-col items-center w-full bg-white border-t border-gray-200 py-4 px-4 md:py-12 md:px-0">
+            <div className="flex gap-2 md:gap-3 w-full items-end bg-gray-50 rounded-xl p-2 md:p-3 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
               <textarea
                 rows={2}
                 type="text"
@@ -336,25 +336,25 @@ export default function IncoBotChat() {
                   }
                 }}
                 disabled={isStreaming}
-                style={{ minHeight: "24px" }}
+                style={{ minHeight: "24px", maxHeight: "120px" }}
                 placeholder="Write a question..."
-                className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-400"
+                className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-400 text-sm md:text-base resize-none"
               />
               {isStreaming ? (
                 <button
                   onClick={() => abortControllerRef.current?.abort()}
-                  className="bg-gradient-to-b from-red-500 to-red-600 hover:bg-red-700 text-white p-3 rounded-xl transition"
+                  className="bg-gradient-to-b from-red-500 to-red-600 hover:bg-red-700 text-white p-2 md:p-3 rounded-xl transition flex-shrink-0"
                   title="Stop generating"
                 >
-                  <Square className="w-5 h-5" />
+                  <Square className="w-4 h-4 md:w-5 md:h-5" />
                 </button>
               ) : (
                 <button
                   onClick={() => askQuestion(input)}
                   disabled={!input.trim()}
-                  className="bg-gradient-to-b from-blue-500 to-blue-600 hover:bg-blue-700 text-white p-3 rounded-xl transition disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-gradient-to-b from-blue-500 to-blue-600 hover:bg-blue-700 text-white p-2 md:p-3 rounded-xl transition disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
                 >
-                  <ArrowUp className="w-5 h-5" />
+                  <ArrowUp className="w-4 h-4 md:w-5 md:h-5" />
                 </button>
               )}
             </div>

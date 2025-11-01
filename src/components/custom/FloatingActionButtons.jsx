@@ -1,8 +1,14 @@
 import React from 'react';
 import { Phone, MessageCircle } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useLocation } from 'react-router';
 
 const FloatingContactWidget = () => {
+  const location = useLocation();
+  if (location.pathname === '/incobot') {
+    return null;
+  }
+  
   const handleWhatsAppClick = () => {
     const phoneNumber = '94722899111';
     const message = 'Hello! I would like to get in touch.';
