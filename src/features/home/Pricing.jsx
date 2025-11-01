@@ -78,7 +78,7 @@ function Pricing() {
       name: "Kickstart",
       additional: (
         <div className="container mx-auto px-4">
-          <div className="flex flex-col justify-self-center md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col justify-center md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center text-center md:text-left">
             <div className="md:pr-5 text-sm lg:text-base font-semibold border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
               <div className="block mb-2 text-sm">Additional Directors</div>
               <div className="text-xs md:text-sm opacity-80">
@@ -116,7 +116,7 @@ function Pricing() {
       name: "Momentum",
       additional: (
         <div className="container mx-auto px-4">
-          <div className="flex flex-col justify-self-center md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col justify-center md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center  text-center md:text-left">
             <div className="md:pr-5 text-sm lg:text-base font-semibold border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
               <div className="block mb-2 text-sm">Additional Directors</div>
               <div className="text-xs md:text-sm opacity-80">
@@ -154,7 +154,7 @@ function Pricing() {
       name: "Elevate",
       additional: (
         <div className="container mx-auto px-4">
-          <div className="flex flex-col justify-self-center md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col justify-center md:flex-row gap-y-4 md:gap-x-5 py-6 px-2 md:px-8 text-white md:divide-x divide-white/20 items-center  text-center md:text-left">
             <div className="md:pr-5 text-sm lg:text-base font-semibold border-b md:border-b-0 border-white/20 pb-4 md:pb-0">
               <div className="block mb-2 text-sm">Additional Directors</div>
               <div className="text-xs md:text-sm opacity-80">
@@ -365,7 +365,7 @@ function Pricing() {
                               <div className="mx-auto w-full items-center justify-center flex">
                                 Additional Services
                               </div>
-                              <div className="flex flex-col justify-center text-center text-sm leading-relaxed">
+                              <div className="flex flex-col justify-center items-center text-center text-sm leading-relaxed">
                                 {
                                   additionalContent.find(
                                     (c) => c.name === plan.name
@@ -396,7 +396,7 @@ function Pricing() {
                 },
                 visible: {
                   opacity: 1,
-                  y: "-10%",
+                  y: "-9%",
                   filter: "blur(0px)",
                 },
               }}
@@ -405,7 +405,7 @@ function Pricing() {
               <div className="flex  w-full items-center justify-center mb-3">
                 Additional Services
               </div>
-              <div className="flex flex-col w-full items-center justify-center text-center text-sm leading-relaxed h-[100px] mx-auto">
+              <div className="flex flex-col w-full items-center justify-center text-center text-sm leading-relaxed h-[280px] md:h-[250px] lg:h-[150px] mx-auto">
                 {activeContent}
               </div>
             </motion.div>
