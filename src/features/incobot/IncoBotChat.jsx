@@ -195,7 +195,7 @@ export default function IncoBotChat() {
     <div className="min-h-screen flex justify-center p-12 transition-all duration-300">
 
         {/* Robot Character */}
-        <div className="hidden md:flex flex-shrink-0">
+        <div className="hidden lg:flex flex-shrink-0">
           <img
             src={bot}
             alt="IncoBot"
@@ -205,7 +205,7 @@ export default function IncoBotChat() {
         </div>
 
         {/* Chat Container */}
-        <div className="flex-1 flex flex-col h-[calc(90vh-2rem)] md:h-[calc(100vh-4rem)] max-w-4xl">
+        <div className="flex-1 flex flex-col h-[calc(90vh-2rem)] md:h-[calc(98vh-4rem)] max-w-4xl">
           {messages.length === 0 ? (
             /* Welcome Screen */
             <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
