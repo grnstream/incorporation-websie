@@ -11,7 +11,7 @@ import newUniverse from "@/src/assets/logos/new-universe.png";
 import slVlog from "@/src/assets/logos/sl-vlog.png";
 import thriposha from "@/src/assets/logos/thriposha.png";
 import trendySolutions from "@/src/assets/logos/trendy-solutions.png";
-import serendibFragrance from "@/src/assets/images/serendib-fragrance.jpg";
+import serendibFragrance from "@/src/assets/logos/serendib-fragrance.png";
 import offrampcolombo from "@/src/assets/images/off-ramp-colombo.jpg";
 
 import herobanner1 from "@/src/assets/images/hero-banner1.png";
