@@ -192,24 +192,24 @@ export default function IncoBotChat() {
   };
 
   return (
-    <div className="min-h-screen flex justify-center p-12 transition-all duration-300 w-6xl">
-      <div className="max-w-6xl w-full flex gap-8 h-full">
+    <div className="min-h-screen flex justify-center p-12 transition-all duration-300">
+
         {/* Robot Character */}
         <div className="hidden md:flex flex-shrink-0">
           <img
             src={bot}
             alt="IncoBot"
-            className="w-60 h-auto object-contain"
+            className="w-48 lg:w-60 h-auto object-contain"
             style={{ animation: "float 5s ease-in-out infinite" }}
           />
         </div>
 
         {/* Chat Container */}
-        <div className="flex-1 flex flex-col max-h-screen ">
+        <div className="flex-1 flex flex-col h-[calc(90vh-2rem)] md:h-[calc(100vh-4rem)] max-w-4xl">
           {messages.length === 0 ? (
             /* Welcome Screen */
-            <div className="flex-1 flex flex-col items-center justify-center text-center">
-              <div className="flex flex-col lg:flex-row items-center gap-3 mb-6">
+            <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
+              <div className="flex flex-col lg:flex-row items-center gap-3">
                 <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
                   Start talking to
                 </h1>
@@ -236,16 +236,16 @@ export default function IncoBotChat() {
           ) : (
             /* Chat Messages */
             <div
-              className="flex-1 overflow-y-auto p-4 md:p-6 space-y-6"
+              className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6 space-y-4 md:space-y-6 "
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               ref={messagesEndRef}
             >
               {messages.map((msg, idx) => (
                 <div key={idx}>
                   {msg.type === "user" ? (
-                    <div className="max-w-3xl">
+                    <div className="max-w-full md:max-w-3xl p-6">
                       <div className="flex items-center gap-2 mb-2">
-                        <div className="w-8 h-8 bg-gray-900 rounded-full"></div>
+                        <div className="w-6 h-6 md:w-8 md:h-8 bg-gray-900 rounded-full flex-shrink-0"></div>
                         <span className="font-semibold text-gray-900">You</span>
                         <span className="text-sm text-gray-500">
                           {msg.time}
@@ -254,7 +254,7 @@ export default function IncoBotChat() {
                       <p className="text-gray-800">{msg.text}</p>
                     </div>
                   ) : (
-                    <div className="max-w-3xl">
+                    <div className="max-w-3xl bg-white rounded-3xl p-6 border-2 border-neutral-100">
                       <div className="flex items-center gap-2 mb-3">
                         <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
                           <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
@@ -262,14 +262,14 @@ export default function IncoBotChat() {
                         <span className="font-semibold text-gray-900">
                           Results
                         </span>
-                        <span className="text-sm text-gray-500">
+                       <span className="text-xs md:text-sm text-gray-500">
                           {msg.time}
                         </span>
                       </div>
-                      <div className=" rounded-2xl  border-0">
+                      <div className="rounded-2xl border-0">
                         <div
-                          className="text-gray-800 leading-relaxed"
-                          style={{ whiteSpace: "pre-wrap" }}
+                          className="text-sm md:text-base text-gray-800 leading-relaxed break-words"
+                          style={{ whiteSpace: "pre-wrap" ,wordBreak: "break-word" }}
                           dangerouslySetInnerHTML={{
                             __html: formatMarkdownToHTML(
                               msg.text || "🤖 Thinking..."
@@ -278,10 +278,10 @@ export default function IncoBotChat() {
                         ></div>
 
                         {!msg.isStreaming && msg.text && (
-                          <div className="flex gap-2 mt-4">
+                          <div className="flex gap-2 mt-3 md:mt-4">
                             <button
                               onClick={() => handleCopy(msg.text, idx)}
-                              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                              className="p-1.5 md:p-2 hover:bg-gray-100 rounded-lg transition-colors"
                               title={
                                 copiedIndex === idx
                                   ? "Copied!"
@@ -289,7 +289,7 @@ export default function IncoBotChat() {
                               }
                             >
                               {copiedIndex === idx ? (
-                                <div className="flex items-center gap-1.5 text-green-600">
+                                 <div className="flex items-center gap-1 md:gap-1.5 text-green-600">
                                   <svg
                                     className="w-5 h-5"
                                     fill="none"
@@ -303,12 +303,12 @@ export default function IncoBotChat() {
                                       d="M5 13l4 4L19 7"
                                     />
                                   </svg>
-                                  <span className="text-sm font-medium">
+                                  <span className="text-xs md:text-sm font-medium">
                                     Copied
                                   </span>
                                 </div>
                               ) : (
-                                <Copy className="w-5 h-5 text-gray-600" />
+                                <Copy className="w-4 h-4 md:w-5 md:h-5 text-gray-600" />
                               )}
                             </button>
                           </div>
@@ -322,11 +322,10 @@ export default function IncoBotChat() {
           )}
 
           {/* Input Area */}
-          <div className="flex flex-col items-center w-full bg-white border-t border-gray-200 py-4 px-4 md:py-12 md:px-0">
+          <div className="flex flex-col items-center w-full bg-white border-t border-gray-200 py-3 px-3 md:py-6 lg:py-12 md:px-4 lg:px-0 max-w-4xl">
             <div className="flex gap-2 md:gap-3 w-full items-end bg-gray-50 rounded-xl p-2 md:p-3 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
               <textarea
                 rows={2}
-                type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => {
@@ -336,7 +335,7 @@ export default function IncoBotChat() {
                   }
                 }}
                 disabled={isStreaming}
-                style={{ minHeight: "24px", maxHeight: "120px" }}
+                style={{ minHeight: "40px", maxHeight: "120px" }}
                 placeholder="Write a question..."
                 className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-400 text-sm md:text-base resize-none"
               />
@@ -359,13 +358,13 @@ export default function IncoBotChat() {
               )}
             </div>
             <div className="mt-2 text-center w-full max-w-3xl">
-              <p className="text-neutral-500 text-xs">
+              <p className="text-neutral-500 text-xs md:text-sm">
                 Information provided is not legal advice.
               </p>
             </div>
           </div>
         </div>
-      </div>
+     
     </div>
   );
 }
