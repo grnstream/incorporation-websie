@@ -18,7 +18,14 @@ function PrivacyPolicyPage() {
           {/* Introduction */}
           <PolicyCard title="Introduction">
             <p className="text-sm md:text-md text-gray-700 leading-relaxed">
-              At incorporation.lk, we are committed to protecting the privacy
+              At <a
+                href="https://incorporation.lk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800"
+              >
+                incorporation.lk
+              </a>, we are committed to protecting the privacy
               and security of our clients’ personal information. This Privacy
               Policy outlines how we collect, use, and safeguard your
               information when you visit or make payment on our website. By

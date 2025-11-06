@@ -18,9 +18,17 @@ function RefundPolicyPage() {
           {/* Introduction */}
           <PolicyCard title="Introduction">
             <p className="text-sm md:text-md text-gray-700 leading-relaxed">
-              Thank you for subscribing to the service at incorporation.lk. We
-              value your satisfaction and strive to provide you with the best
-              online service possible. If, for any reason, you are not
+              Thank you for subscribing to the service at{" "}
+              <a
+                href="https://incorporation.lk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800"
+              >
+                incorporation.lk
+              </a>
+              . We value your satisfaction and strive to provide you with the
+              best online service possible. If, for any reason, you are not
               completely satisfied with our service, we are here to help.
             </p>
           </PolicyCard>
@@ -31,7 +39,14 @@ function RefundPolicyPage() {
               <p className="text-sm md:text-md text-gray-700 leading-relaxed">
                 We accept refund requests within 7 days of the date of payment.
                 You may directly e-mail your refund request by mentioning the
-                reason for the refund to contact@incorporation.lk.
+                reason for the refund to{" "}
+                <a
+                  href="mailto:contact@incorporation.lk"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  contact@incorporation.lk
+                </a>
+                .
               </p>
               <p className=" text-sm md:text-md text-gray-700 leading-relaxed">
                 Once we receive your refund request e-mail, we will notify you
@@ -78,11 +93,27 @@ function RefundPolicyPage() {
           {/* Non-Returnable Items */}
           <PolicyCard title="Non-Returnable Items">
             <p className="text-sm md:text-md text-gray-700 leading-relaxed">
-              In the event of your platform incorporation.lk user account being
-              suspended due to any of the Terms and Condition (Policy)
-              violations, any remaining subscription fee will not be refunded.
-              Please refer to the Terms and Conditions provided on
-              www.incorporation.lk for more information.
+              In the event of your{" "}
+              <a
+                href="https://platform.incorporation.lk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800"
+              >
+                platform.incorporation.lk
+              </a>{" "}
+              user account being suspended due to any of the Terms and Condition
+              (Policy) violations, any remaining subscription fee will not be
+              refunded. Please refer to the Terms and Conditions provided on{" "}
+              <a
+                href="https://incorporation.lk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800"
+              >
+                www.incorporation.lk
+              </a>{" "}
+              for more information.
             </p>
           </PolicyCard>
 
@@ -111,9 +142,15 @@ function RefundPolicyPage() {
           <PolicyCard title="Contact Us">
             <p className="text-sm md:text-md text-gray-700 leading-relaxed">
               If you have any questions or concerns regarding our Refund Policy,
-              please contact us over: contact@incorporation.lk email. We are
-              here to assist you and ensure your interaction with us is
-              enjoyable and hassle-free.
+              please contact us over:{" "}
+              <a
+                href="mailto:contact@incorporation.lk"
+                className="text-blue-600 hover:text-blue-800"
+              >
+                contact@incorporation.lk
+              </a>{" "}
+              email. We are here to assist you and ensure your interaction with
+              us is enjoyable and hassle-free.
             </p>
           </PolicyCard>
         </div>
