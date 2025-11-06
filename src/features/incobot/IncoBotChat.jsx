@@ -97,7 +97,7 @@ export default function IncoBotChat() {
               return updated;
             });
           } catch (error) {
-            console.warn("⚠️ Skipping bad JSON chunk:", jsonStr);
+            console.warn("⚠️ Skipping bad JSON chunk:", jsonStr,error);
           }
         }
       }
