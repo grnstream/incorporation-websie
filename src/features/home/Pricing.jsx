@@ -3,7 +3,7 @@ import PricingMobile from "./PricingMobile";
 import PricingDesktop from "./PricingDesktop";
 
 function Pricing() {
-  const isMobile = useIsMobile(768);
+  const isMobile = useIsMobile(1023);
 
   const plans = [
     {
@@ -19,8 +19,8 @@ function Pricing() {
         "Articles of association",
         "Incorporation certificate (printed copy)",
         "Online client portal access",
-        "Company secretary for registration purpose - no upfront charges",
-        "Any services not listed above will be charged separately.",
+        "Company secretary for registration purpose",
+        "Any services not listed above will be charged separately",
       ],
     },
     {
@@ -44,7 +44,7 @@ function Pricing() {
     },
     {
       name: "Elevate",
-      price: "LKR 79,900",
+      price: "LKR 89,900",
       description:
         "Perfect for entrepreneurs ready to launch with impact, you can start operations quickly and grow with confidence",
       buttonText: "Get Started",

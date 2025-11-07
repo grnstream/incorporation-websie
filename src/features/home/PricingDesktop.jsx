@@ -22,8 +22,8 @@ function PricingDesktop() {
         "Articles of association",
         "Incorporation certificate (printed copy)",
         "Online client portal access",
-        "Company secretary for registration purpose - no upfront charges",
-        "Any services not listed above will be charged separately.",
+        "Company secretary for registration purpose",
+        "Any services not listed above will be charged separately",
       ],
     },
     {
@@ -47,7 +47,7 @@ function PricingDesktop() {
     },
     {
       name: "Elevate",
-      price: "LKR 79,900",
+      price: "LKR 89,900",
       description:
         "Perfect for entrepreneurs ready to launch with impact, you can start operations quickly and grow with confidence",
       buttonText: "Get Started",
