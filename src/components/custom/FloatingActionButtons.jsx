@@ -17,7 +17,7 @@ const FloatingContactWidget = () => {
   };
 
   const handlePhoneClick = () => {
-    const phoneNumber = '+94112515756';
+    const phoneNumber = '+94722899111';
     window.location.href = `tel:${phoneNumber}`;
   };
 
