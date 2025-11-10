@@ -60,12 +60,12 @@ function PricingMobile({ plans, additionalContent }) {
             return (
               <div key={index} className="relative">
                 {plan.isHighlighted && (
-                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 border-3 border-primary-400 rounded-full">
-                          <span className="inline-block bg-white text-blue-500 text-xs font-semibold px-4 py-2 rounded-full  whitespace-nowrap">
-                            Most Popular
-                          </span>
-                        </div>
-                      )}
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 border-3 border-primary-400 rounded-full">
+                    <span className="inline-block bg-white text-blue-500 text-xs font-semibold px-4 py-2 rounded-full  whitespace-nowrap">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
                 <div
                   onClick={() => handleCardClick(plan.name)}
                   className={`rounded-2xl p-6 shadow-lg cursor-pointer transition-all duration-300
@@ -138,7 +138,9 @@ function PricingMobile({ plans, additionalContent }) {
                           <Check
                             size={12}
                             className={
-                              isPlanActive(plan) ? "text-blue-500" : "text-white"
+                              isPlanActive(plan)
+                                ? "text-blue-500"
+                                : "text-white"
                             }
                           />
                         </div>
