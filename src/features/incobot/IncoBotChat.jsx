@@ -192,7 +192,7 @@ export default function IncoBotChat() {
   };
 
   return (
-    <div className="min-h-screen flex justify-center p-12 transition-all duration-300">
+    <div className="min-h-screen flex justify-center md:p-12 transition-all duration-300 bg-neutral-50">
 
         {/* Robot Character */}
         <div className="hidden lg:flex flex-shrink-0">
@@ -205,7 +205,7 @@ export default function IncoBotChat() {
         </div>
 
         {/* Chat Container */}
-        <div className="flex-1 flex flex-col h-[calc(90vh-2rem)] md:h-[calc(98vh-4rem)] max-w-4xl">
+        <div className="flex-1 flex flex-col h-[calc(90vh-2rem)] md:h-[calc(98vh-4rem)] md:max-w-4xl">
           {messages.length === 0 ? (
             /* Welcome Screen */
             <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
@@ -225,7 +225,7 @@ export default function IncoBotChat() {
                 </div>
               </div>
 
-              <div className=" text-gray-600 max-w-screen px-6">
+              <div className=" text-gray-600 max-w-screen md:px-6">
                 <p className="text-md">
                   Starting a business in Sri Lanka? Need quick guidance on
                   registration, compliance, or documents? IncoBot is here to
@@ -236,7 +236,7 @@ export default function IncoBotChat() {
           ) : (
             /* Chat Messages */
             <div
-              className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6 space-y-4 md:space-y-6 "
+              className="flex-1 overflow-y-auto p-3 md:p-4 space-y-4 md:space-y-4 "
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               ref={messagesEndRef}
             >
@@ -254,7 +254,7 @@ export default function IncoBotChat() {
                       <p className="text-gray-800">{msg.text}</p>
                     </div>
                   ) : (
-                    <div className="max-w-3xl bg-white rounded-3xl p-6 border-2 border-neutral-100">
+                    <div className=" bg-white rounded-3xl p-6 border-2 border-neutral-100">
                       <div className="flex items-center gap-2 mb-3">
                         <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
                           <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
@@ -322,8 +322,8 @@ export default function IncoBotChat() {
           )}
 
           {/* Input Area */}
-          <div className="flex flex-col items-center w-full bg-white border-t border-gray-200 py-3 px-3 md:py-6 lg:py-12 md:px-4 lg:px-0 max-w-4xl">
-            <div className="flex gap-2 md:gap-3 w-full items-end bg-gray-50 rounded-xl p-2 md:p-3 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
+          <div className="flex flex-col items-center w-full border-t border-gray-200 py-3 px-3 md:py-6 lg:py-12 md:px-4 lg:px-0 max-w-4xl bg-neutral-50">
+            <div className="flex gap-2 md:gap-3 w-full items-start bg-white rounded-xl p-2 md:p-3 border border-gray-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-200 transition">
               <textarea
                 rows={2}
                 value={input}
@@ -337,7 +337,7 @@ export default function IncoBotChat() {
                 disabled={isStreaming}
                 style={{ minHeight: "40px", maxHeight: "120px" }}
                 placeholder="Write a question..."
-                className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-400 text-sm md:text-base resize-none"
+                className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-400 text-sm md:text-base resize-none p-1"
               />
               {isStreaming ? (
                 <button

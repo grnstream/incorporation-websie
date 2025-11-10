@@ -14,10 +14,10 @@ import { FaTiktok } from "react-icons/fa";
 function Footer() {
   const navigate = useNavigate();
   return (
-    <footer className="bg-gray-50 py-12 px-6">
+    <footer className="bg-gray-50 py-12 md:py-16 lg:py-20 w-full">
       <div className="mx-auto">
         {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row gap-y-6  mb-2 items-start md:justify-between mx-10">
+        <div className="flex flex-col md:flex-row gap-y-6  mb-2 items-start md:justify-between mx-6 md:mx-10 lg:mx-12 transform">
           {/* Left Section - Logo and Contact Info */}
           <div className="space-y-3 mb-5 lg:mb-0">
             {/* Logo */}
@@ -49,11 +49,14 @@ function Footer() {
           </div>
 
           {/* Right Section - About Us */}
-          <div className="flex flex-row gap-8 justify-between">
-            <div className="w-full sm:w-1/2 space-y-3">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                Quick Links
-              </h3>
+          <div className="flex flex-col gap-8 justify-between">
+            {/* title */}
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Quick Links
+            </h3>
+            {/* links */}
+           <div className="flex flex-row gap-6 sm:gap-8 transform">
+             <div className="w-full sm:w-1/2 space-y-3">
               <Link
                 to="/refund-policy"
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
@@ -80,7 +83,10 @@ function Footer() {
               </Link>
             </div>
             <div className="w-full sm:w-1/2 space-y-3">
-              <Link to="/about" className="block text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              <Link
+                to="/about"
+                className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              >
                 About Us
               </Link>
               <Link
@@ -101,13 +107,8 @@ function Footer() {
               >
                 Pricing Options
               </Link>
-              {/* <Link
-                to="#"
-                className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                Success Stories
-              </Link> */}
             </div>
+           </div>
           </div>
         </div>
 
@@ -118,29 +119,33 @@ function Footer() {
             {/* Social Media Icons */}
             <div className="flex items-center space-x-4">
               <a
-                href="https://www.instagram.com/incorporationlk/" target="_blank"
-                  rel="noopener noreferrer"
+                href="https://www.instagram.com/incorporationlk/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <Instagram className="w-5 h-5 text-gray-600" />
               </a>
               <a
-                href="https://www.facebook.com/incorporation.lk.KRC" target="_blank"
-                  rel="noopener noreferrer"
+                href="https://www.facebook.com/incorporation.lk.KRC"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <Facebook className="w-5 h-5 text-gray-600" />
               </a>
               <a
-                href="https://www.youtube.com/channel/UCXIHnAQ2MxXpznEg11aK0Rg" target="_blank"
-                  rel="noopener noreferrer"
+                href="https://www.youtube.com/channel/UCXIHnAQ2MxXpznEg11aK0Rg"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <Youtube className="w-5 h-5 text-gray-600" />
               </a>
               <a
-                href="https://www.tiktok.com/@incorporationlk" target="_blank"
-                  rel="noopener noreferrer"
+                href="https://www.tiktok.com/@incorporationlk"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <FaTiktok className="w-5 h-5 text-gray-500" />

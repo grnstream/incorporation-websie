@@ -19,7 +19,7 @@ function NavigationBar({ isTransparentHeader, isAtTop }) {
         isTransparentHeader && isAtTop
           ? "bg-white backdrop-blur-sm backdrop-filter"
           : "bg-transparent"
-      } px-1 py-0.5 lg:flex`}
+      } px-1 py-0.5 lg:flex `}
     >
       <NavigationMenuList
         className={`${

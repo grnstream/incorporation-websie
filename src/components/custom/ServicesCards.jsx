@@ -60,6 +60,7 @@ function ServicesCards() {
           title={feature.title}
           description={feature.description}
           logo={feature.logo}
+          isHighlighted={feature.isHighlighted}
         />
       ))}
     </div>

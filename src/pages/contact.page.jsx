@@ -32,7 +32,7 @@ const contacts = [
     title: "Call Us",
     logo: phone,
     description: "Mon-Fri, 8am to 5pm",
-    btntext: "+94 72 289 9111",
+    btntext: "+94 72 2899111",
     onClick: () => window.location.href = "tel:+94722899111"
   },
 ];

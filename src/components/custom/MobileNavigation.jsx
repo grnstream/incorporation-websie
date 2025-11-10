@@ -11,7 +11,7 @@ import {
   Info,
   Contact,
 } from "lucide-react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 
 const navItems = [
   { icon: Home, label: "Home", to: "/" },
@@ -67,7 +67,7 @@ function MobileNavigation({ setIsOpen, toggleNav }) {
         <Button
           size={"lg"}
           className={
-            "border-primary-900 text-white my-6 rounded-full transition-colors duration-200"
+            "border-primary-900 text-white my-6 rounded-full transition-colors duration-200 text-xs md:text-sm"
           }
           onClick={() =>
             window.open("https://platform.incorporation.lk/", "_blank")

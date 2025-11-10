@@ -49,8 +49,7 @@ function ServicesPage() {
     {
       title: "E-commerce Integration",
       logo: onlinestore,
-      description:
-        "Seamlessly sell online with secure and scalable e-commerce",
+      description: "Seamlessly sell online with secure and scalable e-commerce",
     },
     {
       title: "Content Creation",
@@ -61,13 +60,13 @@ function ServicesPage() {
     {
       title: "POS Systems",
       logo: pointofsale,
-      description: "Smart point-of-sale systems to simplify sales and manage inventory.",
+      description:
+        "Smart point-of-sale systems to simplify sales and manage inventory.",
     },
     {
       title: "ERP Systems",
       logo: erp,
-      description:
-        "All-in-one business management with powerful ERP solutions",
+      description: "All-in-one business management with powerful ERP solutions",
     },
     {
       title: "Accounting Software",
@@ -78,7 +77,8 @@ function ServicesPage() {
     {
       title: "Custom Software",
       logo: custom,
-      description: "Tailor-made software built to match your unique business processes",
+      description:
+        "Tailor-made software built to match your unique business processes",
     },
   ];
   return (
@@ -109,16 +109,21 @@ function ServicesPage() {
           </p>
         </div>
       </div>
-      {/* Banner Image/Video */}  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 max-w-6xl w-full">
+      {/* Banner Image/Video */}{" "}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 max-w-6xl w-full">
         {additionalfeatures.map((feature, index) => (
           <ServiceCard
+            colorVariant="green"
+            isHighlighted={feature.isHighlighted}
             key={index}
             title={feature.title}
             description={feature.description}
             logo={feature.logo}
-            className="hover:from-green-400 hover:to-green-800"
+           
             secondaryIconClassName={"group-hover:bg-green-700"}
-            secondaryIconBgClassName={"bg-gradient-to-b from-green-500 to-green-700 group-hover:bg-white group-hover:bg-none"}
+            secondaryIconBgClassName={
+              "bg-gradient-to-b from-green-500 to-green-700 group-hover:bg-white group-hover:bg-none"
+            }
           />
         ))}
       </div>

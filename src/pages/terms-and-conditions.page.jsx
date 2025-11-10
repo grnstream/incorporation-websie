@@ -6,7 +6,7 @@ function TermsAndConditionsPage() {
   return (
     <>
       {" "}
-      <div className="mx-auto px-16 py-12 min-h-screen">
+      <div className="mx-auto px-2 md:px-8 py-12 min-h-screen">
         <div className=" rounded-lg">
           {/* Header */}
           <div className="text-center mb-8">
