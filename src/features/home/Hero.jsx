@@ -26,37 +26,38 @@ import { Marquee } from "@/src/components/magicui/marquee";
 
 const customers = [
   {
-    customer: "GreenStream",
-    logo: gsLogo,
-  },
-  {
-    customer: "CameraLk",
-    logo: cameralkLogo,
-  },
-  {
     customer: "Mensug",
     logo: mensugLogo,
-  },
-  {
-    customer: "SL Vlog",
-    logo: slVlog,
   },
   {
     customer: "Thriposha",
     logo: thriposha,
   },
   {
-    customer: "Heritage Hotel",
-    logo: heritageHotel,
+    customer: "Trendy Solutions",
+    logo: trendySolutions,
   },
   {
     customer: "New Universe",
     logo: newUniverse,
   },
   {
-    customer: "Trendy Solutions",
-    logo: trendySolutions,
+    customer: "GreenStream",
+    logo: gsLogo,
   },
+  {
+    customer: "SL Vlog",
+    logo: slVlog,
+  },
+  {
+    customer: "CameraLk",
+    logo: cameralkLogo,
+  },
+  {
+    customer: "Heritage Hotel",
+    logo: heritageHotel,
+  },
+
   {
     customer: "GSMB Technical",
     logo: gsmbTechnicalLogo,
@@ -85,7 +86,6 @@ function Hero() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -194,25 +194,25 @@ function Hero() {
             />
           ))}
         </div>
-        
+
         {/* Customers */}
         <div className="flex flex-col bg-white mt-10 rounded-4xl items-center justify-center text-neutral-900">
           <p className="py-5">Trusted by Over 1,000 Clients Islandwide</p>
           <div className="relative flex w-[55%] flex-col items-center justify-center overflow-hidden">
-          <Marquee pauseOnHover className="[--duration:35s]">
-            {customers.map((c, index) => (
-              <img
-                key={index}
-                src={c.logo}
-                alt={c.customer}
-                className="h-8 w-auto object-contain hover:grayscale-0 transition mr-10"
-              />
-            ))}
-          </Marquee>
+            <Marquee pauseOnHover className="[--duration:35s]">
+              {customers.map((c, index) => (
+                <img
+                  key={index}
+                  src={c.logo}
+                  alt={c.customer}
+                  className="h-8 w-auto object-contain hover:grayscale-0 transition mr-10"
+                />
+              ))}
+            </Marquee>
 
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white"></div>
-        </div>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white"></div>
+          </div>
           {/* <div className="flex flex-wrap items-center justify-center gap-8 my-5">
             {customers.map((c, index) => (
               <img
