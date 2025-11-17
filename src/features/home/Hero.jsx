@@ -28,47 +28,58 @@ const customers = [
   {
     customer: "Mensug",
     logo: mensugLogo,
+    alt: "Mensug",
   },
   {
     customer: "Thriposha",
     logo: thriposha,
+    alt: "Thriposha",
   },
   {
     customer: "Trendy Solutions",
     logo: trendySolutions,
+    alt: "Trendy Solutions",
   },
   {
     customer: "New Universe",
     logo: newUniverse,
+    alt: "New Universe",
   },
   {
     customer: "GreenStream",
     logo: gsLogo,
+    alt: "GreenStream",
   },
   {
     customer: "SL Vlog",
     logo: slVlog,
+    alt: "SL Vlog",
   },
   {
     customer: "CameraLk",
     logo: cameralkLogo,
+    alt: "CameraLk",
   },
   {
     customer: "Heritage Hotel",
     logo: heritageHotel,
+    alt: "Heritage Hotel",
   },
 
   {
     customer: "GSMB Technical",
     logo: gsmbTechnicalLogo,
+    alt: "GSMB Technical",
   },
   {
     customer: "Serendib Fragrance",
     logo: serendibFragrance,
+    alt: "Serendib Fragrance",
   },
   {
     customer: "Offramp Colombo",
     logo: offrampcolombo,
+    alt: "Offramp Colombo",
   },
 ];
 
