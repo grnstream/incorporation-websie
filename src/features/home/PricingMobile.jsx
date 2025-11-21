@@ -62,18 +62,17 @@ function PricingMobile({ plans, additionalContent }) {
                 {plan.isHighlighted && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 border-3 border-primary-400 rounded-full">
                     <span className="inline-block bg-white text-blue-500 text-xs font-semibold px-4 py-2 rounded-full  whitespace-nowrap">
-                      Most Popular
+                      Best Value
                     </span>
                   </div>
                 )}
                 <div
                   onClick={() => handleCardClick(plan.name)}
                   className={`rounded-2xl p-6 shadow-lg cursor-pointer transition-all duration-300
-                ${
-                  isPlanActive(plan)
-                    ? "bg-gradient-to-b from-primary-400 to-primary-500 text-white"
-                    : "bg-white text-gray-900"
-                }
+                ${isPlanActive(plan)
+                      ? "bg-gradient-to-b from-primary-400 to-primary-500 text-white"
+                      : "bg-white text-gray-900"
+                    }
                 `}
                 >
                   {/* Plan Header */}
@@ -87,9 +86,8 @@ function PricingMobile({ plans, additionalContent }) {
                     </h3>
                     <div className="h-12 lg:h-20 overflow-hidden">
                       <p
-                        className={`text-xs sm:text-sm mb-4 text-start ${
-                          isPlanActive(plan) ? "text-blue-100" : "text-gray-600"
-                        }`}
+                        className={`text-xs sm:text-sm mb-4 text-start ${isPlanActive(plan) ? "text-blue-100" : "text-gray-600"
+                          }`}
                       >
                         {plan.description}
                       </p>
@@ -97,9 +95,8 @@ function PricingMobile({ plans, additionalContent }) {
                     <div className="mb-2">
                       <span className="text-3xl font-bold">{plan.price}</span>
                       <span
-                        className={`text-sm ml-1 ${
-                          isPlanActive(plan) ? "text-blue-200" : "text-gray-500"
-                        }`}
+                        className={`text-sm ml-1 ${isPlanActive(plan) ? "text-blue-200" : "text-gray-500"
+                          }`}
                       >
                         / T&C apply
                       </span>
@@ -108,17 +105,20 @@ function PricingMobile({ plans, additionalContent }) {
 
                   <Button
                     size={"lg"}
-                    onClick={() =>
-                      window.open(
-                        "https://platform.incorporation.lk/",
-                        "_blank"
-                      )
-                    }
-                    className={`w-full py-6 px-6 rounded-full font-medium mb-8 transition-all duration-300 ${
-                      isPlanActive(plan)
-                        ? "bg-white text-blue-500 hover:bg-gray-100"
-                        : "bg-gradient-to-b from-primary-400 to-primary-500 text-white hover:bg-gradient-to-t"
-                    }`}
+                    onClick={() => {
+                      if (plan.buttonText === "Contact Us") {
+                        window.location.href = "/contact";
+                      } else {
+                        window.open(
+                          "https://platform.incorporation.lk/",
+                          "_blank"
+                        );
+                      }
+                    }}
+                    className={`w-full py-6 px-6 rounded-full font-medium mb-8 transition-all duration-300 ${isPlanActive(plan)
+                      ? "bg-white text-blue-500 hover:bg-gray-100"
+                      : "bg-gradient-to-b from-primary-400 to-primary-500 text-white hover:bg-gradient-to-t"
+                      }`}
                   >
                     {plan.buttonText}
                   </Button>
@@ -131,9 +131,8 @@ function PricingMobile({ plans, additionalContent }) {
                         className="flex items-start gap-3"
                       >
                         <div
-                          className={`rounded-full p-1 mt-0.5 flex-shrink-0 ${
-                            isPlanActive(plan) ? "bg-white" : "bg-blue-500"
-                          }`}
+                          className={`rounded-full p-1 mt-0.5 flex-shrink-0 ${isPlanActive(plan) ? "bg-white" : "bg-blue-500"
+                            }`}
                         >
                           <Check
                             size={12}
@@ -145,9 +144,8 @@ function PricingMobile({ plans, additionalContent }) {
                           />
                         </div>
                         <span
-                          className={`text-sm leading-relaxed ${
-                            isPlanActive(plan) ? "text-white" : "text-gray-700"
-                          }`}
+                          className={`text-sm leading-relaxed ${isPlanActive(plan) ? "text-white" : "text-gray-700"
+                            }`}
                         >
                           {feature}
                         </span>
