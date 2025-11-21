@@ -101,7 +101,7 @@ const ServiceCard = ({
               "text-white w-full text-xs transition-all duration-300",
               isHighlighted
                 ? `${colors.buttonText} bg-gradient-to-b from-white ${colors.buttonBg}`
-                : `group-hover:${colors.buttonText} group-hover:bg-gradient-to-b group-hover:from-white group-hover:${colors.buttonBg}`
+                : `group-hover:${colors.buttonText} group-hover:bg-gradient-to-b group-hover:from-blue-500 group-hover:${colors.buttonBg}`
             )}
             onClick={onClick}
           >
