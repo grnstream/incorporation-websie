@@ -11,7 +11,7 @@ function Pricing() {
       price: "LKR 39,900",
       description:
         "Best for growing businesses looking for tools & compliance support",
-      buttonText: "Get Started",
+      buttonText: "Get Started Now",
       isHighlighted: false,
       features: [
         "Name approval",
