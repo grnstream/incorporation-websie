@@ -11,7 +11,7 @@ function Pricing() {
       price: "LKR 39,900",
       description:
         "Best for growing businesses looking for tools & compliance support",
-      buttonText: "Get Started Now",
+      buttonText: "Get Started",
       isHighlighted: false,
       features: [
         "Name approval",
@@ -33,7 +33,7 @@ function Pricing() {
       price: "LKR 129,900",
       description:
         "All-in-one, complete compliance & growth package, Includes everything in Kickstart, plus:",
-      buttonText: "Get Started Now",
+      buttonText: "Get Started",
       isHighlighted: true,
       features: [
         "Logo, Letterhead, visiting card design",
@@ -50,7 +50,7 @@ function Pricing() {
       ],
     },
     {
-      name: "Infinity",
+      name: "Infinity3",
       price: "From: LKR 1.5M",
       description:
         "Premium ongoing IT, web & creative support for established businesses",

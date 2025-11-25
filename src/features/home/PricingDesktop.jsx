@@ -54,7 +54,7 @@ function PricingDesktop({ plans, additionalContent }) {
           <div className="min-h-[80vh] py-10 px-4">
             <div className="max-w-7xl mx-auto">
               {/* Pricing Cards */}
-              <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+              <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
                 {plans.map((plan, index) => (
                   <div key={index} className="flex flex-col items-stretch">
                     <div
@@ -72,7 +72,7 @@ function PricingDesktop({ plans, additionalContent }) {
                       )}
                       {/* Main Card */}
                       <div
-                        className={`rounded-2xl p-8 relative z-0 h-full flex flex-col  ${isPlanActive(plan)
+                        className={`rounded-2xl p-7 relative z-0 h-full flex flex-col  ${isPlanActive(plan)
                             ? "bg-gradient-to-b from-primary-400 to-primary-500 text-white shadow-2xl"
                             : "bg-white text-gray-900 shadow-lg"
                           } transition-all duration-500 hover:shadow-xl`}
@@ -193,7 +193,7 @@ function PricingDesktop({ plans, additionalContent }) {
                   filter: "blur(0px)",
                 },
               }}
-              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 py-12 rounded-2xl shadow-xl w-full max-w-6xl mx-auto"
+              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 py-12 rounded-2xl shadow-xl w-full max-w-7xl mx-auto"
             >
               <div className="flex  w-full items-center justify-center mb-3">
                 Additional Services
