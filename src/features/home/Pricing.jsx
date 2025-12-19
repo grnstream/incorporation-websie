@@ -50,7 +50,7 @@ function Pricing() {
       ],
     },
     {
-      name: "Infinity3",
+      name: "Infinity",
       price: "From: LKR 1.5M",
       description:
         "Premium ongoing IT, web & creative support for established businesses",
