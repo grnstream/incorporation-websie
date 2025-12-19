@@ -22,7 +22,7 @@ function WhyChooseUs() {
           <div className="flex max-w-[75%]">
             <p className="text-neutral-500 mt-5">
               We take care of company registration, secretarial tasks,
-              accounting, tax, and compliance . so you can focus on growing your
+              accounting, tax, and compliance. so you can focus on growing your
               dream.
             </p>
           </div>
